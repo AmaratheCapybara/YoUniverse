@@ -31,7 +31,7 @@
 	});
 </script>
 <div class="flex h-60 items-start justify-center">
-	<Button onclick={dropdownSearch.toggle} color='lime'>
+	<Button onclick={dropdownSearch.toggle} color='#77B602'>
 		<h1>Switch</h1>
 		<ChevronDownOutline class="ms-2 h-5 w-5 text-white dark:text-white" />
 	</Button>
