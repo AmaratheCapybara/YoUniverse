@@ -1,5 +1,6 @@
 <script>
     import { 
+        Button,
         Navbar, 
         NavBrand, 
         NavUl, 
@@ -11,10 +12,15 @@
 		DropdownUl,
 		DropdownLi,
 		Avatar,
-		DropdownFooter } from 'svelte-5-ui-lib';
+		DropdownFooter, 
+        Search,
+		Checkbox, } from 'svelte-5-ui-lib';
 	import { page } from '$app/stores';
+    import Switch from './SwitchButton.svelte';
 	let activeUrl = $state($page.url.pathname);
     import { sineIn } from 'svelte/easing';
+    //import * as Icon from 'flowbite-svelte-icons';
+    //import * as comp from 'svelte-5-ui-lib';
 	let nav = uiHelpers();
 	let navStatus = $state(false);
 	let toggleNav = nav.toggle;
@@ -38,7 +44,7 @@
     <div class="flex items-center space-x-1 md:order-2">
         <Avatar
             onclick={dropdownUser.toggle}
-            src="/images/profile-picture-3.webp"
+           
             dot={{ color: 'green' }}
         />
         <div class="relative">
@@ -68,6 +74,9 @@
 {/snippet}
 <NavUl class="order-1" {activeUrl}>
     <NavLi href="/">Home</NavLi>
+  
+        <Switch/>
+    
     <NavLi href="/components/navbar">Navbar</NavLi>
     <NavLi href="/components/footer">Footer</NavLi>
 </NavUl>
