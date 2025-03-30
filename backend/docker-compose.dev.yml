@@ -1,0 +1,35 @@
+services:
+    server:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                NODE_ENV: ${NODE_ENV:-dev}
+        depends_on:
+            postgres:
+                condition: service_healthy
+            redis:
+                condition: service_started
+        environment:
+            NODE_ENV: dev
+        networks:
+            - server-network
+
+    postgres:
+        image: postgres
+        env_file:
+            - .env
+        environment:
+            POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+            POSTGRES_USER: ${DATABASE_USER}
+            POSTGRES_DB: ${DATABASE_NAME}
+        command: '-p ${DATABASE_PORT}'
+        ports:
+            - '${DATABASE_PORT}:${DATABASE_PORT}'
+        networks:
+            - server-network
+        healthcheck:
+            test: ['CMD-SHELL', 'pg_isready -U ${DATABASE_USER} -p ${DATABASE_PORT}']
+            interval: 10s
+            timeout: 5s
+            retries: 5
