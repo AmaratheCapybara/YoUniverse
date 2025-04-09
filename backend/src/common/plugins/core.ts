@@ -19,6 +19,7 @@ async function core(fastify: FastifyInstance) {
 	await fastify.register(cors, {
 		credentials: true,
 		origin: (origin, cb) => {
+
 			if (!origin || origin === '' || process.env.NODE_ENV !== 'prod') {
 				return cb(null, true);
 			}

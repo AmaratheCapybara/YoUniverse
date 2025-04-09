@@ -1,4 +1,6 @@
+import { join } from 'path';
 import { NestFactory } from '@nestjs/core';
+import autoLoad from '@fastify/autoload';
 import { AppModule } from './app.module';
 import {
   FastifyAdapter,
@@ -17,9 +19,11 @@ import { AllExceptionsFilter } from './common/filters/global-exception.filter';
 async function bootstrap() {
   const logger = new LoggerService('Bootstrapper');
 
+  const fastify = new FastifyAdapter();
+
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
-    new FastifyAdapter(),
+    fastify,
   );
 
   // Global middleware, pipes, etc. can be set up here
@@ -34,6 +38,10 @@ async function bootstrap() {
     new AllExceptionsFilter()
   );
   // End setup
+
+  await fastify.register(autoLoad as any, {
+    dir: join(__dirname, 'common', 'plugins')
+  });
 
   const configService = app.get(ConfigService);
   const port = configService.get<number>('PORT') ?? 5000;

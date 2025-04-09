@@ -1,50 +1,65 @@
 <script>
-    import { 
-        Button,
-        Navbar, 
-        NavBrand, 
-        NavUl, 
-        NavLi, 
-        uiHelpers, 
-        NavHamburger,
-		Dropdown,
-		DropdownHeader,
-		DropdownUl,
-		DropdownLi,
-		Avatar,
-		DropdownFooter, 
-        Search,
-		Checkbox, } from 'svelte-5-ui-lib';
-	import { page } from '$app/stores';
-    import Switch from './SwitchButton.svelte';
-    import ProfileDash from './ProfileDash.svelte';
-	let activeUrl = $state($page.url.pathname);
-    import { sineIn } from 'svelte/easing';
-    //import * as Icon from 'flowbite-svelte-icons';
-    //import * as comp from 'svelte-5-ui-lib';
-	let nav = uiHelpers();
-	let navStatus = $state(false);
-	let toggleNav = nav.toggle;
-	let closeNav = nav.close;
-	$effect(() => {
-		navStatus = nav.isOpen;
-		activeUrl = $page.url.pathname;
-	});
-
+	import LoginMini from './LoginMini.svelte';
+	let loginOpen = false;
+	let menuOpen = false;
 </script>
-<div class="relative">
-<Navbar {toggleNav}  {navStatus} breakPoint="md" navClass="bg-gray-100 rounded-xl">
-	{#snippet brand()}
-		<NavBrand siteName="The YoUniverse">
-			<!--<img width="30" src="../../lib/images/blanklogotransparent.png" alt="site icon" />-->
-		</NavBrand>
-	{/snippet}
-   
-<NavUl class="order-1" {activeUrl}>
-    <NavLi href="/">Home</NavLi>
-  
-        <Switch/>
-</NavUl>
-<ProfileDash/>
-</Navbar>
-</div>
+
+<nav class="bg-gray-100 px-4 py-3 rounded-xl shadow-md">
+	<div class="max-w-7xl mx-auto flex items-center justify-between">
+		<!-- Brand -->
+		<a href="/" class="text-xl font-bold text-gray-800">The YoUniverse</a>
+
+		<!-- Hamburger (mobile only) -->
+		<button
+			class="md:hidden text-gray-600"
+			on:click={() => menuOpen = !menuOpen}
+			aria-label="Toggle menu"
+		>
+			☰
+		</button>
+
+		<!-- Desktop Nav -->
+		<div class="hidden md:flex items-center space-x-6">
+			<a href="/" class="text-gray-700 hover:text-blue-500">Home</a>
+
+			<!-- Avatar dropdown -->
+			<div class="relative">
+				<button on:click={() => loginOpen = !loginOpen}>
+					<img
+						class="w-8 h-8 rounded-full cursor-pointer"
+						src="https://api.dicebear.com/6.x/thumbs/svg?seed=LoginUser"
+						alt="User avatar"
+					/>
+				</button>
+
+				{#if loginOpen}
+					<div class="absolute right-0 mt-2 w-64 bg-white border border-gray-300 shadow-xl rounded z-50">
+						<LoginMini />
+					</div>
+				{/if}
+			</div>
+		</div>
+	</div>
+
+	<!-- Mobile menu -->
+	{#if menuOpen}
+		<div class="md:hidden mt-3 flex flex-col space-y-2">
+			<a href="/" class="text-gray-700 hover:text-blue-500">Home</a>
+			<div class="relative">
+				<button on:click={() => loginOpen = !loginOpen}>
+					<img
+						class="w-8 h-8 rounded-full cursor-pointer"
+						src="https://api.dicebear.com/6.x/thumbs/svg?seed=LoginUser"
+						alt="User avatar"
+					/>
+				</button>
+
+				{#if loginOpen}
+					<div class="absolute mt-2 w-64 bg-white border border-gray-300 shadow-xl rounded z-50">
+						<LoginMini />
+					</div>
+				{/if}
+			</div>
+		</div>
+	{/if}
+</nav>

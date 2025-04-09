@@ -20,7 +20,7 @@ export const MESSAGES_CACHE_KEY = 'messages';
 export const ZOD_SCHEMA_KEY = 'ZOD_SCHEMA';
 export const BASE_ENTITIES_PATH = join(__dirname, '..', '..', 'dist', 'modules', '**', '*.entity.js');
 export const VIEWS_PATH = join(__dirname, '..', 'views');
-export const allowedOriginRegex = /^(localhost|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|.*\.vercel\.app|.*\.github\.io)$/;
+export const allowedOriginRegex = /^https?:\/\/localhost(:\d+)?$|^https?:\/\/\d{1,3}(\.\d{1,3}){3}(:\d+)?$|.*\.vercel\.app$|.*\.github\.io$/;
 
 export const MAX_RETRIES = 5;
 export const MAX_DELAY = 30000;
