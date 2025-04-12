@@ -1,10 +1,11 @@
 <script>
+	import {Avatar} from 'svelte-5-ui-lib';
 	import LoginMini from './LoginMini.svelte';
 	let loginOpen = false;
 	let menuOpen = false;
 </script>
 
-<nav class="bg-gray-100 px-4 py-3 rounded-xl shadow-md">
+<nav class="bg-[#77B602] px-4 py-3 rounded-xl shadow-md">
 	<div class="max-w-7xl mx-auto flex items-center justify-between">
 		<!-- Brand -->
 		<a href="/" class="text-xl font-bold text-gray-800">The YoUniverse</a>
