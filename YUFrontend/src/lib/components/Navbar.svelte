@@ -1,7 +1,7 @@
 <script>
-	import {Avatar} from 'svelte-5-ui-lib';
+	import {Avatar, MegaMenu} from 'svelte-5-ui-lib';
 	import LoginMini from './LoginMini.svelte';
-	import {logo} from "$lib/images/blanklogotransparent.png";
+	import {logo} from  "$lib/images/blanklogotransparent.png";
 
 	let loginOpen = false;
 	let menuOpen = false;
@@ -10,7 +10,8 @@
 <nav class="bg-[#77B602] px-4 py-3 rounded-xl shadow-md">
 	<div class="max-w-7xl mx-auto flex items-center justify-between">
 		<!-- Brand -->
-		 <Avatar src = "$lib/images/blanklogotransparent.png"/>
+		 <Avatar src = {logo} alt="logo"/>
+		 
 		<a href="/" class="text-xl font-bold text-gray-800">The YoUniverse</a>
 
 		<!-- Hamburger (mobile only) -->
@@ -24,6 +25,7 @@
 
 		<!-- Desktop Nav -->
 		<div class="hidden md:flex items-center space-x-6">
+			<MegaMenu></MegaMenu>
 			<a href="/" class="text-gray-700 hover:text-blue-500">Home</a>
 
 			<!-- Avatar dropdown -->
