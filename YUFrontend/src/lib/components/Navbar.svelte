@@ -1,8 +1,18 @@
 <script>
-	import {Avatar, MegaMenu} from 'svelte-5-ui-lib';
+	import {
+		Avatar, 
+		Dropdown,
+		DropdownUl,
+		DropdownLi,
+		DropdownHeader,
+		DropdownFooter,
+		MegaMenu,
+		uiHelpers} from 'svelte-5-ui-lib';
 	import LoginMini from './LoginMini.svelte';
 	import {logo} from  "$lib/images/blanklogotransparent.png";
-
+	import { BellSolid, EyeSolid } from 'flowbite-svelte-icons';
+	//for dropdown
+	import { sineIn } from 'svelte/easing';
 	let loginOpen = false;
 	let menuOpen = false;
 </script>
