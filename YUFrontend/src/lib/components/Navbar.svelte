@@ -20,7 +20,7 @@
 <nav class="bg-[#77B602] px-4 py-3 rounded-xl shadow-md">
 	<div class="max-w-7xl mx-auto flex items-center justify-between">
 		<!-- Brand -->
-		 <Avatar src = {logo} alt="logo"/>
+		 <img width="30" src = {logo} alt="logo"/>
 		 
 		<a href="/" class="text-xl font-bold text-gray-800">The YoUniverse</a>
 
