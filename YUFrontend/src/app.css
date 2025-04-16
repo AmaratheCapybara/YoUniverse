@@ -1,8 +1,31 @@
 @import 'tailwindcss';
 
+@layer base {
+    [data-theme="dark"] {
+        --color-backdrop: #050C1D;
+        --color-accent: #77B602;
+        --color-alert: #FF6F61;
+        --color-third-lively: #F4A261;
+        --color-third-calm: #B4D2FF;
+        --color-text: #FFFFFF;
+    }
+    [data-theme="dark"] {
+        --color-backdrop:rgb(255, 255, 255);
+        --color-accent: #77B602;
+        --color-alert: #FF6F61;
+        --color-third-lively: #F4A261;
+        --color-third-calm: #B4D2FF;
+        --color-text:rgb(0, 0, 0);
+    }
+}
+@layer components {
+    .basicBitchButton {
+        background-color: #77B602;
 
-
-
+        
+    }
+}
+/*Flowbite*/
 @custom-variant dark (&:where(.dark, .dark *));
 
 @source "../node_modules/flowbite-svelte-icons/dist";
