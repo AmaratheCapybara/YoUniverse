@@ -9,7 +9,7 @@
         --color-third-calm: #B4D2FF;
         --color-text: #FFFFFF;
     }
-    [data-theme="dark"] {
+    [data-theme="light"] {
         --color-backdrop:rgb(255, 255, 255);
         --color-accent: #77B602;
         --color-alert: #FF6F61;
