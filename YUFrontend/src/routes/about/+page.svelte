@@ -4,7 +4,7 @@
     /** @type {{ data: import('./$types').PageData }} */
     let { data } = $props();
 </script>
-<Card>
+<Card class=" w-100% m-4">
     <p><h1>Welcome to System chat!</h1>
         <p>System Chat is a unique platform designed for plural systems and singlets to communicate, organize, and connect. Whether you're a system with multiple headmates or a singlet, this space is built to honor your experience and individuality.
             <ul>
