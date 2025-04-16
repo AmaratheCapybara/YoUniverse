@@ -13,5 +13,7 @@
 	:global(html) {
 	  background-color: #050C1D;
 	  background-image: url("$lib/images/starbackground.jpg");
+	  background-repeat: repeat;
+	  background-size: cover;
 	}
   </style>
