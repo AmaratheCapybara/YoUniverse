@@ -1,6 +1,7 @@
 <script>
 	import {Avatar} from 'svelte-5-ui-lib';
 	import LoginMini from './LoginMini.svelte';
+	import {logo} from "$lib/images/blanklogotransparent.png"
 	let loginOpen = false;
 	let menuOpen = false;
 </script>
@@ -8,6 +9,7 @@
 <nav class="bg-[#77B602] px-4 py-3 rounded-xl shadow-md">
 	<div class="max-w-7xl mx-auto flex items-center justify-between">
 		<!-- Brand -->
+		 <Avatar src = {logo}/>
 		<a href="/" class="text-xl font-bold text-gray-800">The YoUniverse</a>
 
 		<!-- Hamburger (mobile only) -->
