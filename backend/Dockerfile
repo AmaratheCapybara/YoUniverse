@@ -41,7 +41,14 @@ COPY --chown=appuser:appuser ./scripts/wait.sh /
 COPY --chown=appuser:appuser ./scripts/build.sh /
 
 RUN chmod +x /wait.sh /build.sh
-RUN /build.sh && ls -al /usr/src/app/dist
+#RUN /build.sh && ls -al /usr/src/app/dist
+RUN echo "======================" && \
+    echo "🚀 Starting build script..." && \
+    echo "======================" && \
+    /build.sh || { echo "❌ Build script failed! Dumping current directory contents:"; ls -al /usr/src/app; exit 1; } && \
+    echo "======================" && \
+    echo "📂 Listing build output directory contents:" && \
+    ls -al /usr/src/app/dist || { echo "⚠️ dist folder does not exist after build!"; exit 1; }
 
 # Runtime Stage
 FROM node:22-slim AS runtime

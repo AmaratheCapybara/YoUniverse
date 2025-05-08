@@ -25,7 +25,7 @@
 		"drizzle-kit": "^0.30.2",
 		"flowbite": "^3.1.2",
 		"flowbite-icons": "^1.5.0",
-		"flowbite-svelte": "^0.48.4",
+		"flowbite-svelte": "^0.48.6",
 		"flowbite-svelte-blocks": "^1.1.4",
 		"flowbite-svelte-icons": "^2.1.0",
 		"flowbite-typography": "^1.0.5",
@@ -41,8 +41,10 @@
 		"@node-rs/argon2": "^2.0.2",
 		"@oslojs/crypto": "^1.0.1",
 		"@oslojs/encoding": "^1.1.0",
+		"@selemondev/svelte-marquee": "^0.0.3",
 		"drizzle-orm": "^0.40.0",
-		"postgres": "^3.4.5"
+		"postgres": "^3.4.5",
+		"yufrontend": "file:"
 	},
 	"packageManager": "yarn@4.7.0+sha512.5a0afa1d4c1d844b3447ee3319633797bcd6385d9a44be07993ae52ff4facabccafb4af5dcd1c2f9a94ac113e5e9ff56f6130431905884414229e284e37bb7c9"
 }

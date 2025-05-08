@@ -10,7 +10,8 @@
 		TableBodyRow,
 		TableBodyCell,
 		Checkbox, 
-		Avatar} from 'svelte-5-ui-lib';
+		Avatar,
+		Badge} from 'svelte-5-ui-lib';
 	const headItems = ['Brand', 'Name', 'Color', 'Type', 'Price'];
 	const bodyItems = [
 		['Apple', 'MacBook Pro 17"', 'Sliver', 'Laptop', '$2999'],
@@ -49,7 +50,13 @@ let {headmateslist} =$state([]);
     </TableBodyCell>
     <TableBodyCell>{member.name}</TableBodyCell>
     <TableBodyCell>{member.handle}</TableBodyCell>
-    <TableBodyCell>{member.subsystems}</TableBodyCell>
+    <TableBodyCell>
+		{#each subsystems as system}
+			<Badge>
+		{member.system}
+			</Badge>
+		{/each}
+</TableBodyCell>
     
     <TableBodyCell>
         <a

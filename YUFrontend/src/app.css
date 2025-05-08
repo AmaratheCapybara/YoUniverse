@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-
+@plugin 'flowbite/plugin';
 @layer base {
     [data-theme="dark"] {
         --color-backdrop: #050C1D;
@@ -17,6 +17,74 @@
         --color-third-calm: #B4D2FF;
         --color-text:rgb(0, 0, 0);
     }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+       
+        font-weight: bold;
+    }
+    h1 {
+        font-size: var(--text-9xl);
+    }
+    h2 {
+        font-size: var(--text-8xl);
+    }
+    h3 {
+        font-size: var(--text-7xl);
+    }
+    h4{
+        font-size: var(--text-6xl);
+    }
+   h5{
+    font-size: var(--text-5xl);
+   } 
+   h5 {
+    font-size: var(--text-4xl);
+
+   }
+   
+   
+   button {
+    border-radius: 12px;
+    padding: 14px 40px;
+    font-weight: 700;
+    block-size:100%;
+    font-size:100%;
+            }
+}
+@media (width < 40rem){
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+       
+        font-weight: bold;
+    }
+    h1 {
+        font-size: var(--text-6xl);
+    }
+    h2 {
+        font-size: var(--text-5xl);
+    }
+    h3 {
+        font-size: var(--text-4xl);
+    }
+    h4{
+        font-size: var(--text-3xl);
+    }
+   h5{
+    font-size: var(--text-2xl);
+   } 
+   h5 {
+    font-size: var(--text-1xl);
+ 
+   }
+
 }
 @layer components {
     .basic-bitch-button {
@@ -27,12 +95,35 @@
 }
 /*Flowbite*/
 @custom-variant dark (&:where(.dark, .dark *));
-
-@source "../node_modules/flowbite-svelte-icons/dist";
-@source "../node_modules/svelte-animated-icons/dist";
-@source "../node_modules/svelte-5-ui-lib/dist";
-
 @theme {
+    --color-primary-50: #fff5f2;
+    --color-primary-100: #fff1ee;
+    --color-primary-200: #ffe4de;
+    --color-primary-300: #ffd5cc;
+    --color-primary-400: #ffbcad;
+    --color-primary-500: #fe795d;
+    --color-primary-600: #ef562f;
+    --color-primary-700: #eb4f27;
+    --color-primary-800: #cc4522;
+    --color-primary-900: #a5371b;
+  }
+  
+  @layer base {
+    button, [role="button"] {
+      cursor: pointer;
+    }
+  }
+
+@source './src/**/*.{html,js,svelte,ts,md}';
+@source '../node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}';
+@source '../node_modules/flowbite-svelte-icons/**/*.{html,js,svelte,ts}';
+@source '../node_modules/flowbite-svelte-blocks/**/*.{html,js,svelte,ts}';
+
+/*@source "../node_modules/flowbite-svelte-icons/dist";
+@source "../node_modules/svelte-animated-icons/dist";*/
+/*@source "../node_modules/svelte-5-ui-lib/dist";*/
+@source "../node_modules/flowbite-svelte/dist";
+/*@theme {
     --z-index-100: 100;
 
     --color-primary-50: #fff5f2;
@@ -399,3 +490,4 @@ select:not([size]) {
 :root {
     background-image: url ("starbackground.jpg")
 }
+*/

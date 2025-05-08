@@ -9,10 +9,10 @@
 		DropdownFooter,
 		Search,
 		Checkbox,
-		uiHelpers
-	} from 'svelte-5-ui-lib';
+		
+	} from 'flowbite-svelte';
 	import { ChevronDownOutline, UserRemoveSolid } from 'flowbite-svelte-icons';
-
+import {uiHelpers} from "svelte-5-ui-lib";
 	let searchTerm = $state('');
 	const people = [
 		{ name: 'Robert Gouth', checked: false },
@@ -35,6 +35,7 @@
 		<h1>Switch</h1>
 		<ChevronDownOutline class="ms-2 h-5 w-5 text-white dark:text-white" />
 	</Button>
+	{#if (Account.AccounType === "Polyfragmented")}
 	<div class="relative">
 		<Dropdown
 			dropdownStatus={dropdownSearchStatus}
@@ -59,4 +60,6 @@
 			</DropdownFooter>
 		</Dropdown>
 	</div>
-    </div>
+   
+	{/if}
+</div>

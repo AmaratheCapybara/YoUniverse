@@ -2,7 +2,7 @@
     import {ButtonGroup, Button, GradientButton, Footer} from 'svelte-5-ui-lib';
     import '../../app.css';
 </script>
-<Footer footerType="sticky" class="absolute flex justify-stretch justify-center bg-transparent">
+<Footer footerType="sticky" class="absolute flex justify-stretch justify-center bg-transparent justify-items-center">
 
     <ButtonGroup id="FooterButtons" class=" flex justify-stretch justify-center bg-[#77B602] center">
         <Button href="https://ko-fi.com/youniverseproject" class="basicBitchButton">Donation</Button>

@@ -20,7 +20,7 @@
 
 	function goToRegister() {
 		goto('/auth');
-	}
+	};
 </script>
 
 <div class="p-2 w-64">
