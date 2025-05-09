@@ -54,7 +54,7 @@
 		<div class="hidden md:flex items-center space-x-6">
 			<MegaMenu></MegaMenu>
 			<a href="/" class="text-gray-700 hover:text-blue-500">Home</a>
-			<Button><MessageCaptionSolid/></Button>
+		
 
 			<!-- Avatar dropdown -->
 			<div class="relative">
