@@ -30,7 +30,7 @@
 	});
 </script>
 
-<Navbar class="bg-[#77B602] px-4 py-3 rounded-xl shadow-md">
+<Navbar class="bg-[#77B602] px-4 py-3 rounded-xl shadow-md ">
 	<div class="max-w-7xl mx-auto flex items-center justify-between">
 		<!-- Brand -->
 		<NavBrand href="/">
@@ -53,7 +53,7 @@
 		<!-- Desktop Nav -->
 		<div class="hidden md:flex items-center space-x-6">
 			<MegaMenu></MegaMenu>
-			<a href="/" class="text-gray-700 hover:text-blue-500">Home</a>
+		
 		
 
 			<!-- Avatar dropdown -->
