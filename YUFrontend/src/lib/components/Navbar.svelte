@@ -18,6 +18,7 @@
 	//for dropdown
 	import { sineIn } from 'svelte/easing';
 	import ProfileDash from './ProfileDash.svelte';
+	let authed =  $state(true);
 	let loginOpen = $state(false);
 	let menuOpen = $state(false);
 	let opensesame = uiHelpers();
@@ -49,29 +50,39 @@
 		>
 			☰
 		</button>
+		{#if (!authed)}
+		<div class="relative">
+			<Avatar src="https://api.dicebear.com/6.x/thumbs/svg?seed=LoginUser"
+			alt="User avatar"></Avatar>
+			<button onclick={loginOpen.toggle}>
+				<img
+					class="w-8 h-8 rounded-full cursor-pointer"
+					src="https://api.dicebear.com/6.x/thumbs/svg?seed=LoginUser"
+					alt="User avatar"
+				/>
+			</button>
 
+			{#if loginOpen===true}
+				<div class="absolute right-0 mt-2 w-64 bg-white border border-gray-300 shadow-xl rounded z-50">
+					<LoginMini />
+				</div>
+			{/if}
+		</div>
+{:else if (authed)}
+<ProfileDash/>
+
+		{/if}
 		<!-- Desktop Nav -->
 		<div class="hidden md:flex items-center space-x-6">
+			
 			<MegaMenu></MegaMenu>
 		
 		
 
+			
+				
 			<!-- Avatar dropdown -->
-			<div class="relative">
-				<button onclick={loginOpen.toggle}>
-					<img
-						class="w-8 h-8 rounded-full cursor-pointer"
-						src="https://api.dicebear.com/6.x/thumbs/svg?seed=LoginUser"
-						alt="User avatar"
-					/>
-				</button>
-
-				{#if loginOpen===true}
-					<div class="absolute right-0 mt-2 w-64 bg-white border border-gray-300 shadow-xl rounded z-50">
-						<LoginMini />
-					</div>
-				{/if}
-			</div>
+			
 		</div>
 	</div>
 
@@ -96,4 +107,6 @@
 			</div>
 		</div>
 	{/if}
+
+	
 	</Navbar>
