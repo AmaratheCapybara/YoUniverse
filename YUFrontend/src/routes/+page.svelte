@@ -47,7 +47,8 @@ Badge,
 		FileImageSolid,
 		CalendarPlusSolid,
 		ClipboardListSolid,
-		CalendarEditSolid
+		CalendarEditSolid,
+		
 	} from 'flowbite-svelte-icons';
 import SideWindow from "../lib/components/SideWindow.svelte";
 	import { page } from '$app/stores';
@@ -224,6 +225,7 @@ let SelectedProfile = $state(Profiles[0]);
 let AboutOpen =$state(false); // toggle true and false to look at the windows
 
 let CometOpen=$state(true);
+
 let CreateCometOpen= $state();
 let isLogin = $state();
 
@@ -337,7 +339,7 @@ let isLogin = $state();
 		defaultClass="flex rounded-lg divide-x rtl:divide-x-reverse divide-gray-200 shadow dark:divide-gray-700"
 	>
 		<TabItem class="w-100%" open>
-			<span slot="title"><CalendarEditSolid></CalendarEditSolid>Event</span>
+			<span slot="title"><EditSolid/></span>
 		<!--{#snippet titleSlot()}
 			<div class="flex items-center gap-2 flex justify-center">
 				<KeyboardSolid size="md" />
@@ -361,10 +363,12 @@ let isLogin = $state();
    multiple
    bind:selectedFiles
  />
+ <section data-tabs-target={tabContentSelector}>
+	<Fileupload ></Fileupload>
 {#each selectedFiles as file}<p>{file.name}</p>{/each}
-				
+</section>				
 		</TabItem>
-		<TabItem class="w-100%">
+		<TabItem class="w-100%" >
 			<!--{#snippet titleSlot()}
 			<div class="flex items-center gap-2 flex justify-center">
 				<CalendarPlusSolid></CalendarPlusSolid>
@@ -373,7 +377,7 @@ let isLogin = $state();
 				</div>
 			</div>
 		{/snippet}-->
-			<span slot="title"><CalendarEditSolid></CalendarEditSolid>Event</span>
+			<span slot="title" ><CalendarEditSolid></CalendarEditSolid>Event</span>
 			<p class="text-sm text-gray-500 dark:text-gray-400">
 			
 				<input id="EventName" type="text" placeholder="My awesome event" />
