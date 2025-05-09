@@ -9,10 +9,11 @@
 		DropdownFooter,
 		Search,
 		Checkbox,
-		
+		MegaMenu
 	} from 'flowbite-svelte';
 	import { ChevronDownOutline, UserRemoveSolid } from 'flowbite-svelte-icons';
 import {uiHelpers} from "svelte-5-ui-lib";
+let {Profiles, ProfilePic, Name}= $props();
 	let searchTerm = $state('');
 	const people = [
 		{ name: 'Robert Gouth', checked: false },
@@ -30,6 +31,8 @@ import {uiHelpers} from "svelte-5-ui-lib";
 		dropdownSearchStatus = dropdownSearch.isOpen;
 	});
 </script>
+
+<!--
 <div class="flex h-60 items-start justify-center">
 	<Button onclick={dropdownSearch.toggle} color='#77B602'>
 		<h1>Switch</h1>
@@ -63,3 +66,4 @@ import {uiHelpers} from "svelte-5-ui-lib";
    
 	{/if}
 </div>
+-->

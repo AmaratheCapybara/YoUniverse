@@ -7,6 +7,7 @@ AccordionItem,
 Search, 
 Avatar 
 } from 'flowbite-svelte';
+import HeadmateButtonGroup from ''
 let {
     FavoriteColor,
     ProfilePic,
@@ -19,23 +20,26 @@ let {
     timestamp
 } = $props();
 </script>
+
+		<div id="ButtonRow">
+		<HeadmateButtonGroup/>
+		</div>
 <Accordion>
 	<AccordionItem>
-		<span slot="header">In conversation</span>
-		<div id="ButtonRow">
-			<ButtonGroup>
-				{#each Profiles as sender}
-					<!-- Button with dynamically applied background color -->
-					<button
-						class="sender-button {sender === senderInput ? 'active' : ''}"
-						on:click={() => setSender(sender)}
-						style="background-color: {sender.FavoriteColor}"
-					>
-						<span>{sender.Name}</span>
-						<div><Avatar size="md" src={sender.ProfilePic} alt={sender.Name} rounded /></div>
-					</button>
-				{/each}
-			</ButtonGroup>
-		</div>
+		<ButtonGroup>
+			<Button>
+				In Conversation
+			</Button>
+			<Button>
+				Fronting
+			</Button>
+			{#each SpaceStations as SpaceStation}
+			<Button color={SpaceStation.FavoriteColor}>{SpaceStation.Name} <Avatar src={SpaceStation.ProfilePic}/></Button>
+			{/each}
+			{#each System as system}
+			<Button color={system.FavoriteColor}>{system.Name} <Avatar src={system.ProfilePic}/></Button>
+			
+			{/each}
+		</ButtonGroup>
 	</AccordionItem>
 </Accordion>
