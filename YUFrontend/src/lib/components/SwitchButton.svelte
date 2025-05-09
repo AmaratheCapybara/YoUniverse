@@ -31,7 +31,7 @@ let {ProfilePic, Name}= $props();
 		dropdownSearchStatus = dropdownSearch.isOpen;
 	});
 </script>
-
+<MegaMenu></MegaMenu>
 <!--
 <div class="flex h-60 items-start justify-center">
 	<Button onclick={dropdownSearch.toggle} color='#77B602'>
