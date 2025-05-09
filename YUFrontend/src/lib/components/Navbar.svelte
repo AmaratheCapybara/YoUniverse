@@ -13,15 +13,20 @@
 		NavBrand, NavHamburger, NavUl, NavLi,} from 'flowbite-svelte';
 		import {uiHelpers} from "svelte-5-ui-lib";
 	import LoginMini from './LoginMini.svelte';
-	import {logo} from  "$lib/images/blanklogotransparent.png";
+	import {logo} from  
+	'$lib/images/blanklogotransparent.png';
 	import { BellSolid, EyeSolid, MessageCaptionSolid } from 'flowbite-svelte-icons';
 	//for dropdown
 	import { sineIn } from 'svelte/easing';
 import {page} from '$app/stores';
 	import ProfileDash from './ProfileDash.svelte';
+	import SwitchButton from './SwitchButton.svelte';
+	let { data } = $props();
+
+
 	let session = $derived($page.data.session);
 	let authed =  $state(false);
-	let loginOpen = $state(true);
+	let loginOpen = $state(false);
 	let menuOpen = $state(false);
 	let opensesame = uiHelpers();
 	let dropdownNotificationStatus = $state(false);
@@ -29,13 +34,13 @@ import {page} from '$app/stores';
 	$effect(() => {
 		dropdownNotificationStatus = opensesame.isOpen;
 		
-		loginOpen = opensesame.isOpen;
+		//loginOpen = opensesame.isOpen;
 
 	});
 </script>
 
 <Navbar class="bg-[#77B602] px-4 py-3 rounded-xl shadow-md ">
-	<div class="max-w-7xl mx-auto flex items-center justify-between">
+	<div class="max-w-7xl mx-auto flex items-center justify-between justify-items-evenly">
 		<!-- Brand -->
 		<NavBrand href="/">
 			<img src={logo} class="me-3 h-6 sm:h-9" alt="YoUniverse logo" />
@@ -46,45 +51,22 @@ import {page} from '$app/stores';
 	<!--<ProfileDash ></ProfileDash>-->
 		<NavHamburger class="w-full md:flex md:w-auto md:order-1" />
 		<!-- Hamburger (mobile only) -->
-		<button
-			class="md:hidden text-gray-600"
-			onclick={menuOpen.toggle}
-			aria-label="Toggle menu"
-		>
-			☰
-		</button>
+		
 		{#if (!$page.data.session)}
 		
-		<div class="relative">
-			<button onclick={loginOpen.toggle}>
-			<Avatar src="https://api.dicebear.com/6.x/thumbs/svg?seed=LoginUser"
-			alt="User avatar"></Avatar>
-			
-			</button>
-
-			{#if loginOpen===true}
-				<div class="absolute right-0 mt-2 w-64 bg-white border border-gray-300 shadow-xl rounded z-50">
-					<LoginMini />
-				</div>
-			{/if}
-		</div>
+		<div></div>
 {:else if ($page.data.session)}
-<ProfileDash/>
-
+<NavHamburger/>
+<NavUl class="cursor-pointer" onclick={() => (open = true)}>
+	<SwitchButton/>
+</NavUl>
 		{/if}
-		<!-- Desktop Nav -->
-		<div class="hidden md:flex items-center space-x-6">
-			
-			<MegaMenu></MegaMenu>
-		
-		
 
-			
-				
-			<!-- Avatar dropdown -->
-			
-		</div>
-	</div>
+
+
+		<ProfileDash bind:this={loginOpen} {data}/>
+	
+
 
 	<!-- Mobile menu -->
 	{#if (menuOpen===true)}
