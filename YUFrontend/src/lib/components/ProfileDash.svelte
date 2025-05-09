@@ -12,6 +12,9 @@
 		Avatar,
     } from 'flowbite-svelte'
 	import { page } from '$app/stores';
+    let { data } = $props();
+
+
 	let activeUrl = $state($page.url.pathname);
     
     let dropdownUser = uiHelpers();
@@ -22,7 +25,7 @@
 	import { BellSolid, EyeSolid } from 'flowbite-svelte-icons';
 	
 	
-  let authed = $state(true) // toggle login log out
+  //let authed = $state(false) // toggle login log out
     
     //for dropdown
 	
@@ -33,7 +36,7 @@
 		activeUrl = $page.url.pathname;
 	});
 </script>
-{#if (authed)}
+{#if ($page.data.session)}
 
 <div class="flex items-center space-x-1 md:order-2">
     <Avatar
@@ -68,7 +71,7 @@
   
 </div>
 
-{:else if (!authed)}
+{:else if (!$page.data.session)}
 <div class="relative">
     <button onclick={() => loginOpen = !loginOpen}>
         <img
