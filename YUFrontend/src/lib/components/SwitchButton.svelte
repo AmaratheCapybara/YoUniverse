@@ -15,7 +15,7 @@
 import {uiHelpers} from "svelte-5-ui-lib";
 let {Profiles, ProfilePic, Name}= $props();
 	let searchTerm = $state('');
-	const people = [
+	const Profiles = [
 		{ name: 'Robert Gouth', checked: false },
 		{ name: 'Jese Leos', checked: false },
 		{ name: 'Bonnie Green', checked: true }
