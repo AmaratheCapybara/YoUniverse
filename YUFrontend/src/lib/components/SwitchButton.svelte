@@ -13,7 +13,7 @@
 	} from 'flowbite-svelte';
 	import { ChevronDownOutline, UserRemoveSolid } from 'flowbite-svelte-icons';
 import {uiHelpers} from "svelte-5-ui-lib";
-let {Profiles, ProfilePic, Name}= $props();
+let {ProfilePic, Name}= $props();
 	let searchTerm = $state('');
 	const Profiles = [
 		{ name: 'Robert Gouth', checked: false },
