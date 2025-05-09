@@ -17,9 +17,11 @@
 	import { BellSolid, EyeSolid, MessageCaptionSolid } from 'flowbite-svelte-icons';
 	//for dropdown
 	import { sineIn } from 'svelte/easing';
+import {page} from '$app/stores';
 	import ProfileDash from './ProfileDash.svelte';
-	let authed =  $state(true);
-	let loginOpen = $state(false);
+	let session = $derived($page.data.session);
+	let authed =  $state(false);
+	let loginOpen = $state(true);
 	let menuOpen = $state(false);
 	let opensesame = uiHelpers();
 	let dropdownNotificationStatus = $state(false);
@@ -28,6 +30,7 @@
 		dropdownNotificationStatus = opensesame.isOpen;
 		
 		loginOpen = opensesame.isOpen;
+
 	});
 </script>
 
@@ -50,16 +53,13 @@
 		>
 			☰
 		</button>
-		{#if (!authed)}
+		{#if (!$page.data.session)}
+		
 		<div class="relative">
+			<button onclick={loginOpen.toggle}>
 			<Avatar src="https://api.dicebear.com/6.x/thumbs/svg?seed=LoginUser"
 			alt="User avatar"></Avatar>
-			<button onclick={loginOpen.toggle}>
-				<img
-					class="w-8 h-8 rounded-full cursor-pointer"
-					src="https://api.dicebear.com/6.x/thumbs/svg?seed=LoginUser"
-					alt="User avatar"
-				/>
+			
 			</button>
 
 			{#if loginOpen===true}
@@ -68,7 +68,7 @@
 				</div>
 			{/if}
 		</div>
-{:else if (authed)}
+{:else if ($page.data.session)}
 <ProfileDash/>
 
 		{/if}
@@ -89,14 +89,10 @@
 	<!-- Mobile menu -->
 	{#if (menuOpen===true)}
 		<div class="md:hidden mt-3 flex flex-col space-y-2">
-			<a href="/" class="text-gray-700 hover:text-blue-500">Home</a>
+			 
 			<div class="relative">
 				<button onclick={loginOpen.toggle}>
-					<img
-						class="w-8 h-8 rounded-full cursor-pointer"
-						src="https://api.dicebear.com/6.x/thumbs/svg?seed=LoginUser"
-						alt="User avatar"
-					/>
+				h
 				</button>
 
 				{#if (loginOpen===true)}
