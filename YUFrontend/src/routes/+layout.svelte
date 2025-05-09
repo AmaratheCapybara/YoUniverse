@@ -16,7 +16,7 @@ import { uiHelpers } from 'svelte-5-ui-lib';
 		loginOpen = opensesame.isOpen;
 	});
 </script>
-<Navbar bind:this ={navbar} {data}/>
+<Navbar bind:this ={navbar} {data} class="flex"/>
 <div class=" h-100vh  @container w-auto ">
 {@render children()}
 </div>

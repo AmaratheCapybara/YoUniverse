@@ -8,7 +8,7 @@
 		DropdownUl,
 		DropdownLi,
 		DropdownHeader,
-		DropdownFooter,
+		Footer,
 		Avatar,
     } from 'flowbite-svelte'
 	import { page } from '$app/stores';
