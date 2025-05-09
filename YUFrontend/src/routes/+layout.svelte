@@ -3,7 +3,7 @@
 	import Footer from '../lib/components/Footer.svelte';
 	import Navbar from '../lib/components/Navbar.svelte'
 import { uiHelpers } from 'svelte-5-ui-lib';
-	let { children } = $props();
+	let { children, data } = $props();
 	let navbar; 
 	let loginOpen = $state(false);
 	let menuOpen = $state(false);
@@ -16,7 +16,7 @@ import { uiHelpers } from 'svelte-5-ui-lib';
 		loginOpen = opensesame.isOpen;
 	});
 </script>
-<Navbar bind:this ={navbar}/>
+<Navbar bind:this ={navbar} {data}/>
 <div class=" h-100vh  @container w-auto ">
 {@render children()}
 </div>
