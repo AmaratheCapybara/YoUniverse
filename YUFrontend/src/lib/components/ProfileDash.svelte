@@ -1,14 +1,16 @@
 <script>
     import { sineIn } from 'svelte/easing';
 	import {
-		Dropdown,
+		uiHelpers
+	} from 'svelte-5-ui-lib';
+    import {
+        Dropdown,
 		DropdownUl,
 		DropdownLi,
 		DropdownHeader,
 		DropdownFooter,
 		Avatar,
-		uiHelpers
-	} from 'svelte-5-ui-lib';
+    } from 'flowbite-svelte'
 	import { page } from '$app/stores';
 	let activeUrl = $state($page.url.pathname);
     
@@ -18,7 +20,11 @@
     import LoginMini from './LoginMini.svelte';
 	import {logo} from  "$lib/images/blanklogotransparent.png";
 	import { BellSolid, EyeSolid } from 'flowbite-svelte-icons';
-	//for dropdown
+	
+	
+  let authed = $state(true) // toggle login log out
+    
+    //for dropdown
 	
 	let loginOpen = $state(false);
 	let menuOpen = false;
@@ -27,13 +33,13 @@
 		activeUrl = $page.url.pathname;
 	});
 </script>
-{#if (sessionToken)}
-{#snippet navSlotBlock()}
+{#if (authed)}
+
 <div class="flex items-center space-x-1 md:order-2">
     <Avatar
         onclick={dropdownUser.toggle}
        
-        dot={{ color: 'green' }}
+        dot={{ color: 'grey' }}
         src="https://api.dicebear.com/6.x/thumbs/svg?seed=LoginUser"
 					alt="User avatar"
     />
@@ -59,12 +65,12 @@
             >
         </Dropdown>
     </div>
-    <NavHamburger {toggleNav} />
+  
 </div>
-{/snippet}
-{:else if (!sessionToken)}
+
+{:else if (!authed)}
 <div class="relative">
-    <button on:click={() => loginOpen = !loginOpen}>
+    <button onclick={() => loginOpen = !loginOpen}>
         <img
             class="w-8 h-8 rounded-full cursor-pointer"
             src="https://api.dicebear.com/6.x/thumbs/svg?seed=LoginUser"
@@ -86,7 +92,7 @@
 <div class="md:hidden mt-3 flex flex-col space-y-2">
 <a href="/" class="text-gray-700 hover:text-blue-500">Home</a>
 <div class="relative">
-    <button on:click={() => loginOpen = !loginOpen}>
+    <button onclick={() => loginOpen = !loginOpen}>
         <img
             class="w-8 h-8 rounded-full cursor-pointer"
             src="https://api.dicebear.com/6.x/thumbs/svg?seed=LoginUser"
