@@ -34,6 +34,8 @@
         onclick={dropdownUser.toggle}
        
         dot={{ color: 'green' }}
+        src="https://api.dicebear.com/6.x/thumbs/svg?seed=LoginUser"
+					alt="User avatar"
     />
     <div class="relative">
         <Dropdown
