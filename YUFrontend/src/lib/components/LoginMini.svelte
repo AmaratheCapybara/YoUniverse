@@ -31,7 +31,7 @@
 		Log In
 	</button>
 
-	<button on:click={goToRegister} class="text-sm text-[#77B602] hover:underline w-full">
+	<button on:click={goToRegister} class="text-sm text-[#77B602] hover:underline w-full hover:text-[#FF6F61]">
 		Create an account
 	</button>
 
