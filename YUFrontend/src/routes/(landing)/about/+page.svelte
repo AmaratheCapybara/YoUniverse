@@ -121,29 +121,74 @@
   </ul>
 </section>
     </TabItem>
+    <TabItem class="hidden">
+      <div slot="title" class="flex items-center gap-2">
+        
+        Demo
+
+      </div>
+     
+    </TabItem>
+    <TabItem>
+      <div slot="title" class="flex items-center gap-2">
+        
+        Get involved!
+      </div>
+      <section>
+        <h1>Volunteer</h1>
+        <p>we are accepting volunteers through email and our Discord server</p>
+      </section>
+      <section>
+        <h1>Stay up to date</h1>
+        <!--
+        Discord
+        maaybe email letter
+        -->
+      </section>
+      <section>
+        <h1>Funding</h1>
+        <ul>
+          <li>
+            <h2>Donation pages</h2>
+             <!--
+        for single time donations and custom monthly donations, use Ko-fi. For preset memberships use patreon.-->
+          </li>
+          <li>
+           <h2>Merchandise</h2>
+<!--Redbubble Shop-->
+           <p><i>Returns and refunds are done through RedBubble. YoUniverse is not responsible for the creation and delievery of merchandise. If an issue occurs, contact Redbubble's customer service.</i></p>
+          </li>
+          <h2>Financial Transparency</h2>
+          <h3>Percentage YoUniverse recieves from:</h3>
+          <ul>
+            <li><b>ko-fi:</b></li>
+            <li><b>Patreon:</b></li>
+            <li><b>RedBubble:</b></li>
+          </ul>
+        </ul>
+      </section>
+    </TabItem>
+    <TabItem>
+      <div slot="title" class="flex items-center gap-2">
+        Frequently Asked Questions
+      </div>
+      <h1>who is YoUniverse for?</h1>
+      <h1>Will [insert specific people group] be allowed on YoUniverse?</h1>
+      <h1>Will our profiles be searchable?</h1>
+      <h1>Will there be an offline version?</h1>
+      <h1>How will YoUniverse protect our privacy?</h1>
+      <h1>Can I volunteer?</h1>
+    </TabItem>
     <TabItem>
       <div slot="title" class="flex items-center gap-2">
         
         Contacts
       </div>
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        <b>Contacts:</b>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <ul>
+        <li>
+      <p><b>Email</b> youniversedevteam@gmail.com</p>
+        </li>
+        <li><b>Discord</b> <a href='https://discord.gg/NmmkZP6QFS'>join here</a></li>
+    </ul>
     </TabItem>
   </Tabs>
-
-        <Card class=" w-100% m-4 text-black flex">
-            
-              
-        </Card>
-       
-   <Card>
-    <h1>Goals</h1>
-   </Card>
-<Card>
-    <h1>Frequently Asked Questions</h1>
-</Card>
-<Card>
-    <h1>Demo</h1>
-</Card>
