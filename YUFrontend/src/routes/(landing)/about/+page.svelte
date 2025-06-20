@@ -25,6 +25,15 @@
     <h1> Reduce the allostatic load of plurals and their loved ones</h1>
   
   </header>
+
+<h2>what is <b>Allostatic load</b></h2>
+<p> A simple way of thinking about Allostatic load is that it is the increased likelyhood of developing physical and mental ilnnesses due to chronic stress.</p>
+<cite>
+  Allostatic Load: Importance, Markers, and Score Determination in Minority and Disparity Populations by Erik J Rodriquez, Edward N Kim , Anne E Sumner , Anna M Nápoles , Eliseo  Pérez-Stable
+</cite>
+
+<h3>Steps the project has taken to ackomplish allostatic load reduction:</h3>
+
   <ul>
     <li>
       Framework built with plurals and their loved one’s in mind
@@ -35,9 +44,19 @@
     <li>
       Streamline onboarding
     </li>
+    <ul>
+      <li>
+        Start messaging as soon as possible
+      </li>
+    </ul>
     <li>
       Remove involuntary minority labels
     </li>
+    <ul>
+      <li>
+        No one will be distinguished as plural or singlet. All profiles will look the same, regardless of the individual's situation. Any identity labels used will be up to individual users to distinguish themselves and will not be imposed by the website.
+      </li>
+    </ul>
   </ul>
 </section>
 <section>
@@ -59,6 +78,11 @@
     <li>
       Personalized notifications for each profile
     </li>
+    <ul>
+      <li>
+        Minimizes spam from the notifications of other profiles on the account
+      </li>
+    </ul>
     <li>
       Connecting to profile on different account requires UUID for the specific profile trying to be reached
     </li>
