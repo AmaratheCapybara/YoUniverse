@@ -32,7 +32,7 @@
   Allostatic Load: Importance, Markers, and Score Determination in Minority and Disparity Populations by Erik J Rodriquez, Edward N Kim , Anne E Sumner , Anna M Nápoles , Eliseo  Pérez-Stable
 </cite>
 
-<h3>Steps the project has taken to ackomplish allostatic load reduction:</h3>
+<h3>Steps the project has taken to accomplish allostatic load reduction:</h3>
 
   <ul>
     <li>
@@ -65,6 +65,7 @@
       Promote healthy internal and external communication
     </h1>
   </header>
+  <h3></h3>
   <ul>
     <li>
       Private Messaging across all profiles for one on one conversations
