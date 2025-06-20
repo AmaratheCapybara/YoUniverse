@@ -14,7 +14,29 @@
     
 </script>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5p_SmXHEbuw?si=1WV2gmB2_EREdfli" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 <Tabs tabStyle="underline">
+  <TabItem>
+    <div slot="title" class="flex items-center gap-2">
+  
+      Dashboard
+    </div>
+    <p class="text-sm text-gray-500 dark:text-gray-400">
+      <b>Dashboard:</b>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </TabItem>
+  
+  <TabItem>
+    <div slot="title" class="flex items-center gap-2">
+      
+      Contacts
+    </div>
+    <p class="text-sm text-gray-500 dark:text-gray-400">
+      <b>Contacts:</b>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </TabItem>
     <TabItem open>
       <div slot="title" class="flex items-center gap-2">
         
@@ -65,7 +87,7 @@
       Promote healthy internal and external communication
     </h1>
   </header>
-  <h3></h3>
+  <h3>Steps the project has taken to assist in improved communication:</h3>
   <ul>
     <li>
       Private Messaging across all profiles for one on one conversations
@@ -90,27 +112,7 @@
   </ul>
 </section>
     </TabItem>
-    <TabItem>
-      <div slot="title" class="flex items-center gap-2">
     
-        Dashboard
-      </div>
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        <b>Dashboard:</b>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-    </TabItem>
-    
-    <TabItem>
-      <div slot="title" class="flex items-center gap-2">
-        
-        Contacts
-      </div>
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        <b>Contacts:</b>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-    </TabItem>
   </Tabs>
 
         <Card class=" w-100% m-4 text-black flex">
