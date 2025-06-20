@@ -14,7 +14,7 @@
 		import {uiHelpers} from "svelte-5-ui-lib";
 	import LoginMini from './LoginMini.svelte';
 	import {logo} from  
-	'$lib/images/blanklogotransparent.png';
+	'$logo';
 	import { BellSolid, EyeSolid, MessageCaptionSolid } from 'flowbite-svelte-icons';
 	//for dropdown
 	import { sineIn } from 'svelte/easing';
