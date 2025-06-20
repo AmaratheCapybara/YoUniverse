@@ -8,8 +8,10 @@ export default defineConfig({
 	kit: {
 		alias: {
 			// this will match a file
-			'slogo': './src/lib/images/blanklogotransparent.png',
-
+			'$logo': './src/lib/images/blanklogotransparent.png',
+			'$images': './src/lib/images',
+			'$lib': './src/lib',
+			'$comp': './src/lib/components'
 			// this will match a directory and its contents
 			// (`my-directory/x` resolves to `path/to/my-directory/x`)
 			//'my-directory': 'path/to/my-directory',
