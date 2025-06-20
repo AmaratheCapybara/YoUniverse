@@ -13,3 +13,6 @@
         <image src= '$images/fhd_Patreon_Wordmark_fb38c295a1.png'/>
     </Button>
 </Card>
+<style lang="postcss">
+	@reference "tailwindcss";
+    </style>
