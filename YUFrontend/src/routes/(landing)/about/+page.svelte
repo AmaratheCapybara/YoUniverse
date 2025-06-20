@@ -19,24 +19,15 @@
   <TabItem>
     <div slot="title" class="flex items-center gap-2">
   
-      Dashboard
+  Summary of project
     </div>
     <p class="text-sm text-gray-500 dark:text-gray-400">
-      <b>Dashboard:</b>
+   
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </p>
   </TabItem>
   
-  <TabItem>
-    <div slot="title" class="flex items-center gap-2">
-      
-      Contacts
-    </div>
-    <p class="text-sm text-gray-500 dark:text-gray-400">
-      <b>Contacts:</b>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-  </TabItem>
+
     <TabItem open>
       <div slot="title" class="flex items-center gap-2">
         
@@ -112,7 +103,16 @@
   </ul>
 </section>
     </TabItem>
-    
+    <TabItem>
+      <div slot="title" class="flex items-center gap-2">
+        
+        Contacts
+      </div>
+      <p class="text-sm text-gray-500 dark:text-gray-400">
+        <b>Contacts:</b>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+    </TabItem>
   </Tabs>
 
         <Card class=" w-100% m-4 text-black flex">
