@@ -46,6 +46,23 @@
       Promote healthy internal and external communication
     </h1>
   </header>
+  <ul>
+    <li>
+      Private Messaging across all profiles for one on one conversations
+    </li>
+    <li>
+      System group chats
+    </li>
+    <li>
+      Feed for system updates and news <i>to be implemented later on</i>
+    </li>
+    <li>
+      Personalized notifications for each profile
+    </li>
+    <li>
+      Connecting to profile on different account requires UUID for the specific profile trying to be reached
+    </li>
+  </ul>
 </section>
     </TabItem>
     <TabItem>
