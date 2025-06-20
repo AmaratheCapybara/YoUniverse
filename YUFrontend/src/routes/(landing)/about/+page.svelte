@@ -21,10 +21,28 @@
   
   Summary of project
     </div>
-    <p class="text-sm text-gray-500 dark:text-gray-400">
-   
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
+<section>
+  <h1>Welcome to YoUniverse! </h1>
+  <h2> the first social media platform built with plural systems and their loved ones in mind</h2>
+</section>
+<section>
+  <p>YoUniverse is a unique platform designed for plural systems and singlets to communicate, organize, and connect. Whether you're a system with multiple headmates or a singlet, this space is built to honor your experience and individuality.
+    <ul>
+        <li>For Systems: Manage your collective, create headmates, and communicate seamlessly. Each headmate can send messages, whether they are fronting or not, and switch notifications ensure that everyone stays informed. Customize your privacy settings to suit your comfort, and safeguard your littles and teens with built-in protections.</li>
+        <li>For Singlets: Stay connected with friends in systems while maintaining a user-friendly experience tailored just for you.</li>
+    </ul>
+<p>With YoUniverse, you can:
+    <ul>
+        <li>Create individual headmate profiles within your system and customize their profiles.</li>
+        <li>Engage in private or group conversations with specific headmates.</li>
+        <li>Protect your system’s privacy with robust permissions for minors</li>
+        <li>Easily switch between headmates, keeping everyone informed with notifications.</li>
+    </ul>
+<footer class='hidden'><!--unhide when login is available-->
+<a href= '/auth'> sign up! </a>
+
+</footer>
+</section>
   </TabItem>
   
 
@@ -35,7 +53,7 @@
       </div>
 <section>
   <header>
-    <h1> Reduce the allostatic load of plurals and their loved ones</h1>
+    <h1> Reduce the allostatic load of plural systems and their loved ones</h1>
   
   </header>
 
@@ -116,23 +134,8 @@
   </Tabs>
 
         <Card class=" w-100% m-4 text-black flex">
-            <p><h1>Welcome to System chat!</h1>
-                <p>System Chat is a unique platform designed for plural systems and singlets to communicate, organize, and connect. Whether you're a system with multiple headmates or a singlet, this space is built to honor your experience and individuality.
-                    <ul>
-                        <li>For Systems: Manage your collective, create headmates, and communicate seamlessly. Each headmate can send messages, whether they are fronting or not, and switch notifications ensure that everyone stays informed. Customize your privacy settings to suit your comfort, and safeguard your littles and teens with built-in protections.</li>
-                        <li>For Singlets: Stay connected with friends in systems while maintaining a user-friendly experience tailored just for you.</li>
-                    </ul>
-                <p>With System Chat, you can:
-                    <ul>
-                        <li>Create individual headmate profiles within your system and customize their profiles.</li>
-                        <li>Engage in private or group conversations with specific headmates.</li>
-                        <li>Protect your system’s privacy with robust permissions for minors</li>
-                        <li>Easily switch between headmates, keeping everyone informed with notifications.</li>
-                    </ul>
-               <footer>
-                <a href= '/auth'> sign up! </a>
-                
-            </footer>
+            
+              
         </Card>
        
    <Card>
