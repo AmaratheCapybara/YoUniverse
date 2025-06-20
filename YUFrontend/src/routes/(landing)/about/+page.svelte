@@ -18,12 +18,35 @@
     <TabItem open>
       <div slot="title" class="flex items-center gap-2">
         
-        Profile
+       Goals
       </div>
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        <b>Profile:</b>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+<section>
+  <header>
+    <h1> Reduce the allostatic load of plurals and their loved ones</h1>
+  
+  </header>
+  <ul>
+    <li>
+      Framework built with plurals and their loved one’s in mind
+    </li>
+    <li>
+      Easy navigation of site and switching feature
+    </li>
+    <li>
+      Streamline onboarding
+    </li>
+    <li>
+      Remove involuntary minority labels
+    </li>
+  </ul>
+</section>
+<section>
+  <header>
+    <h1>
+      Promote healthy internal and external communication
+    </h1>
+  </header>
+</section>
     </TabItem>
     <TabItem>
       <div slot="title" class="flex items-center gap-2">
@@ -35,16 +58,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
     </TabItem>
-    <TabItem>
-      <div slot="title" class="flex items-center gap-2">
-       
-        Settings
-      </div>
-      <p class="text-sm text-gray-500 dark:text-gray-400">
-        <b>Settings:</b>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-    </TabItem>
+    
     <TabItem>
       <div slot="title" class="flex items-center gap-2">
         
