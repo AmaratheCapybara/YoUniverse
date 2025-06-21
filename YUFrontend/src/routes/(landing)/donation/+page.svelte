@@ -11,10 +11,10 @@
 </Card>
 <Card>
     <section><h1>Or become a member on our patreon</h1></section>
-    <Button class='h-md w-md' href ='patreon.com/YoUniverseProject'>
+    <button href ='patreon.com/YoUniverseProject'>
         <image src= '$images/fhd_Patreon_Symbol_6fff9723d3.png'/>
         <image src= '$images/fhd_Patreon_Wordmark_fb38c295a1.png'/>
-    </Button>
+    </button>
 </Card>
 <style lang="postcss">
 	@reference "tailwindcss";
