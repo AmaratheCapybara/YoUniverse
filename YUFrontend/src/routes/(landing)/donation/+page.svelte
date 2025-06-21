@@ -18,4 +18,8 @@
 </Card>
 <style lang="postcss">
 	@reference "tailwindcss";
+    button {
+        color: white;
+        background-color: #77B602;
+    }
     </style>
