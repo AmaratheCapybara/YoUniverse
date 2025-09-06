@@ -1,5 +1,5 @@
 <script>
-    import {ButtonGroup, Button, GradientButton, Footer} from 'svelte-5-ui-lib';
+    import {ButtonGroup, Button, GradientButton, Footer} from 'flowbite-svelte';
     import '../../app.css';
 </script>
 <Footer footerType="sticky" class="absolute flex justify-stretch justify-center bg-transparent justify-items-center">

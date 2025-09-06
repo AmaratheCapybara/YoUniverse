@@ -2,9 +2,9 @@
 	import { Drawer, Drawerhead, Button,  Avatar } from 'flowbite-svelte';
 	import { InfoCircleSolid } from 'flowbite-svelte-icons';
 	import ProfileNav from './ProfileNav.svelte';
-	import {uiHelpers} from 'svelte-5-ui-lib';
+	
 	let drawerStatus = $state(true);
-	let drawer= uiHelpers();
+	let drawer= $state();
 	const closeDrawer = drawer.close;
 	$effect(() => {
 		drawerStatus = drawer.isOpen;

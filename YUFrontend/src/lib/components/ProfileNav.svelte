@@ -1,5 +1,5 @@
 <script>
-	import { Avatar, Sidebar, SidebarGroup, SidebarItem, SidebarButton, uiHelpers, Listgroup, ListgroupItem } from 'svelte-5-ui-lib';
+	import { Avatar, Sidebar, SidebarGroup, SidebarItem, SidebarButton, Listgroup, ListgroupItem } from 'flowbite-svelte';
 	import { ChartOutline, GridSolid, MailBoxSolid, UserSolid } from 'flowbite-svelte-icons';
 	import { page } from '$app/stores';
     let {AboutOpen=$bindable(true),...props} =$props()

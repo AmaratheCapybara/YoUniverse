@@ -8,14 +8,14 @@
 		SidebarItem,
 		SidebarDropdownWrapper,
 		SidebarButton,
-		uiHelpers,
+	
 
 		Avatar,
 
 		avatar
 
 
-	} from 'svelte-5-ui-lib';
+	} from 'flowbite-svelte';
 	import {
 		ChartOutline,
 		GridSolid,
@@ -27,7 +27,7 @@
 	import { page } from '$app/stores';
 	let activeUrl = $state($page.url.pathname);
 	const spanClass = 'flex-1 ms-3 whitespace-nowrap';
-	const demoSidebarUi = uiHelpers();
+	const demoSidebarUi = $state();
 	let isDemoOpen = $state(false);
 	const closeDemoSidebar = demoSidebarUi.close;
 	$effect(() => {

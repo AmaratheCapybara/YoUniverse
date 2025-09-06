@@ -1,8 +1,6 @@
 <script>
     import { sineIn } from 'svelte/easing';
-	import {
-		uiHelpers
-	} from 'svelte-5-ui-lib';
+	
     import {
         Dropdown,
 		DropdownUl,
@@ -17,7 +15,7 @@
 
 	let activeUrl = $state($page.url.pathname);
     
-    let dropdownUser = uiHelpers();
+    let dropdownUser = $state();
 	let dropdownUserStatus = $state(false);
 	let closeDropdownUser = dropdownUser.close;
     import LoginMini from './LoginMini.svelte';

@@ -2,11 +2,11 @@
 	//remove after setting up auth
 	   /** @type {{ data: import('./$types').PageData }} */
 	   let { data } = $props();
-	//import { Button } from "svelte-5-ui-lib";
+	//import { Button } from "flowbite-svelte";
 	import ProfileDash from "../lib/components/ProfileDash.svelte";
 	//import * as Icon from 'flowbite-svelte-icons';
  //for profile page
-	import { uiHelpers } from 'svelte-5-ui-lib';
+	
   
   import {
 		Sidebar,

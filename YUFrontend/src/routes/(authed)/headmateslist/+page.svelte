@@ -11,7 +11,7 @@
 		TableBodyCell,
 		Checkbox, 
 		Avatar,
-		Badge} from 'svelte-5-ui-lib';
+		Badge} from 'flowbite-svelte';
 	const headItems = ['Brand', 'Name', 'Color', 'Type', 'Price'];
 	const bodyItems = [
 		['Apple', 'MacBook Pro 17"', 'Sliver', 'Laptop', '$2999'],

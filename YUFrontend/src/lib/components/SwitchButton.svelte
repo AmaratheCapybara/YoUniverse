@@ -12,7 +12,7 @@
 		MegaMenu
 	} from 'flowbite-svelte';
 	import { ChevronDownOutline, UserRemoveSolid } from 'flowbite-svelte-icons';
-import {uiHelpers} from "svelte-5-ui-lib";
+
 let {ProfilePic, Name}= $props();
 	let searchTerm = $state('');
 	const Profiles = [
@@ -24,7 +24,7 @@ let {ProfilePic, Name}= $props();
 		people.filter((person) => person.name.toLowerCase().indexOf(searchTerm?.toLowerCase()) !== -1)
 	);
 
-	let dropdownSearch = uiHelpers();
+	let dropdownSearch = $state();
 	let dropdownSearchStatus = $state(false);
 	let closeDropdownSearch = dropdownSearch.close;
 	$effect(() => {

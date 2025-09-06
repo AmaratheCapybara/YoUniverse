@@ -4,7 +4,7 @@
 
     import PatreonSymbol from '$lib/images/fhd_Patreon_Symbol_6fff9723d3.png'
     import PatreonWordmark from '$lib/images/fhd_Patreon_Wordmark_fb38c295a1.png'
-	//import { Button } from 'svelte-5-ui-lib';
+	//import { Button } from 'flowbite-svelte';
 
     /** @type {{ data: import('./$types').PageData }} */
     let { data } = $props();

@@ -2,12 +2,12 @@
 	import '../app.css';
 	import Footer from '../lib/components/Footer.svelte';
 	import Navbar from '../lib/components/Navbar.svelte'
-import { uiHelpers } from 'svelte-5-ui-lib';
+
 	let { children, data } = $props();
 	let navbar; 
 	let loginOpen = $state(false);
 	let menuOpen = $state(false);
-	let opensesame = uiHelpers();
+	let opensesame = $state();
 	let dropdownNotificationStatus = $state(false);
 	let closeDropdownNotification = opensesame.close;
 	$effect(() => {
