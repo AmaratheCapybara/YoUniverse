@@ -327,12 +327,12 @@ let isLogin = $state();
 {/if}
 {#if CometOpen}
 <div class="isolate md:isolation-auto justify-center justify-items-center">
-<Marquee shadow speed={1} hoverSpeed={0.5} class="py-16 isolate md:isolation-auto">
+<!--<Marquee shadow speed={1} hoverSpeed={0.5} class="py-16 isolate md:isolation-auto">
     <img class="w-16 h-16" alt="flowbite-svelte icon logo" src="https://flowbite-svelte.com/images/flowbite-svelte-icon-logo.svg" />
     <img class="w-16 h-16" alt="flowbite-svelte icon logo" src="https://www.flowbite-react.com/favicon.svg" />
     <img class="w-16 h-16" alt="flowbite-svelte icon logo" src="https://flowbite-vue.com/assets/logo.svg" />
     <img class="w-16 h-16" alt="flowbite-svelte icon logo" src="https://flowbite.com/docs/images/logo.svg" />
-</Marquee>
+</Marquee>-->
 <Card id="Create Comet" class="inline-flex">
 	<Tabs
 		tabStyle="full"
