@@ -40,7 +40,7 @@ import {page} from '$app/stores';
 </script>
 
 <Navbar class="bg-[#77B602] px-4 py-3 rounded-xl shadow-md ">
-	<div class="max-w-7xl mx-auto flex  justify-between justify-items-evenly">
+	
 		<!-- Brand -->
 		<NavBrand href="/">
 			<img src={logo} class="me-3 h-6 sm:h-9" alt="YoUniverse logo" />
@@ -54,7 +54,7 @@ import {page} from '$app/stores';
 		
 		{#if (!$page.data.session)}
 		
-		</div>
+	<h1>test</h1>
 {:else if ($page.data.session)}
 <NavHamburger/>
 <NavUl class="cursor-pointer" onclick={() => (open = true)}>
