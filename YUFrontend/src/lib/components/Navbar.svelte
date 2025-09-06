@@ -11,10 +11,10 @@
 		Button,
 		Navbar,
 		NavBrand, NavHamburger, NavUl, NavLi,} from 'flowbite-svelte';
-		import {uiHelpers} from "svelte-5-ui-lib";
+		
 	import LoginMini from './LoginMini.svelte';
 	import {logo} from  
-	'$logo';
+	'../images/blanklogotransparent.png';
 	import { BellSolid, EyeSolid, MessageCaptionSolid } from 'flowbite-svelte-icons';
 	//for dropdown
 	import { sineIn } from 'svelte/easing';
@@ -28,7 +28,7 @@ import {page} from '$app/stores';
 	let authed =  $state(false);
 	let loginOpen = $state(false);
 	let menuOpen = $state(false);
-	let opensesame = uiHelpers();
+	let opensesame = $state();
 	let dropdownNotificationStatus = $state(false);
 	let closeDropdownNotification = opensesame.close;
 	$effect(() => {
@@ -54,7 +54,7 @@ import {page} from '$app/stores';
 		
 		{#if (!$page.data.session)}
 		
-		<div></div>
+		</div>
 {:else if ($page.data.session)}
 <NavHamburger/>
 <NavUl class="cursor-pointer" onclick={() => (open = true)}>
