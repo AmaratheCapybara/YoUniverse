@@ -1,5 +1,6 @@
-@import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Michroma&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'tailwindcss';
+
 @plugin 'flowbite/plugin';
 @layer base {
     [data-theme="dark"] {
