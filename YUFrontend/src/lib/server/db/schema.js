@@ -1,5 +1,5 @@
 import { pgTable, serial, text, integer, timestamp } from 'drizzle-orm/pg-core';
-
+//for auth
 export const user = pgTable('user', {
 	id: text('id').primaryKey(),
 	age: integer('age'),
@@ -14,3 +14,4 @@ export const session = pgTable('session', {
 		.references(() => user.id),
 	expiresAt: timestamp('expires_at', { withTimezone: true, mode: 'date' }).notNull()
 });
+//Site set up
