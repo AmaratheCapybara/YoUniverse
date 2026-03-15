@@ -106,7 +106,7 @@
     .nav {
         background-color: var(--color-accent);
         color: var(--color-backdrop);
-        min-width: full;
+        min-width: 100%;
         position:fixed;
         top: 0;
     }
@@ -157,10 +157,10 @@ footer, .footer {
    h5{
     font-size: var(--text-2xl);
    } 
-   h5 {
+  /* h5 {
     font-size: var(--text-1xl);
  
-   }
+   }*/
 
 }
 @layer components {
@@ -203,7 +203,7 @@ footer, .footer {
 
 
 
-:root {
+/*:root {
     background-image: url ("starbackground.jpg")
 }
 */

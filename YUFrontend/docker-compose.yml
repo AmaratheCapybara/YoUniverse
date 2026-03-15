@@ -5,10 +5,10 @@ services:
     ports:
       - 5432:5432
     environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: mysecretpassword
-      POSTGRES_DB: local
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1704
+      POSTGRES_DB: YoUniverseDemo
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/
 volumes:
   pgdata:

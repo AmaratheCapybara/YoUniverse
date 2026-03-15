@@ -1,8 +1,8 @@
 <script>
-	import '../app.css';
-import Footer from '../lib/components/Footer.svelte';
+	import '../../app.css';
+import Footer from '$lib/components/Footer.svelte';
 import Navbar from '$lib/components/Navbar.svelte';
-	import BottomButtons from '$lib/components/BottomButtons.svelte';
+	//import BottomButtons from '$lib/components/BottomButtons.svelte';
 	let { children } = $props();
 </script>
 <Navbar></Navbar>
