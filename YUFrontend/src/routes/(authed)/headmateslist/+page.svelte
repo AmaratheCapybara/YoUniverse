@@ -12,6 +12,7 @@
 		Checkbox, 
 		Avatar,
 		Badge} from 'flowbite-svelte';
+    import {Account} from "$lib/stores/Account.svelte..js";
 	const headItems = ['Brand', 'Name', 'Color', 'Type', 'Price'];
 	const bodyItems = [
 		['Apple', 'MacBook Pro 17"', 'Sliver', 'Laptop', '$2999'],
@@ -22,6 +23,9 @@
 	];
 let {Headmates} = $state([]);
 let {headmateslist} =$state([]);
+
+console.log(Account.Headmates);
+Account.Headmates = [];
 </script>
 
 <Button class="bbg- [#77B602] m-4"> Add New Member</Button>
