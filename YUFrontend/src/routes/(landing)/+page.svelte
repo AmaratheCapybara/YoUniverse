@@ -5,14 +5,6 @@
   let { data } = $props();
 
   import '../../app.css';
-  import { 
-    Card, 
-    Carousel, 
-    Tabs, 
-    TabItem, 
-    Img, 
-    Button
-  } from 'flowbite-svelte';
 
 
 </script>
