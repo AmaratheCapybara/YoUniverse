@@ -3,6 +3,9 @@
 const SelectedProfile= Account.Profiles
 
 
-export async function load() {
-    return {};
+export async function load(event) {
+	console.log(event);
+	return {
+
+		};
 };
