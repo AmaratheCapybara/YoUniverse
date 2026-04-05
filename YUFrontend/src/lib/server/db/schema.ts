@@ -42,8 +42,8 @@ export const ProfileSubstatus = pgEnum('ProfileSubstatus',[
 
 
 export const profile = pgTable('profile', {
-	id: serial('id').primaryKey().notNull().unique(),
-	SocialID: serial('SocialID').notNull(),
+	id: text('id').primaryKey().notNull(),
+	SocialID: text('SocialID').notNull(),
 	name: text('name').notNull(),
 	handle: text('handle'),
 	pronouns: text('pronouns'),
