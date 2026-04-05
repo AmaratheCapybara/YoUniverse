@@ -1659,7 +1659,6 @@ vitefu@^1.0.6:
     "@oslojs/crypto" "^1.0.1"
     "@oslojs/encoding" "^1.1.0"
     "@selemondev/svelte-marquee" "^0.0.3"
-    drizzle-orm "^0.40.0"
     postgres "^3.4.5"
     yufrontend "file:"
 
