@@ -40,6 +40,7 @@
 		"@oslojs/crypto": "^1.0.1",
 		"@oslojs/encoding": "^1.1.0",
 		"@selemondev/svelte-marquee": "^0.0.3",
+		"drizzle-kit": "^0.31.10",
 		"postgres": "^3.4.5",
 		"yufrontend": "file:"
 	},
