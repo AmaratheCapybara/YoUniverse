@@ -18,7 +18,7 @@
 	import { BellSolid, EyeSolid, MessageCaptionSolid } from 'flowbite-svelte-icons';
 	//for dropdown
 	import { sineIn } from 'svelte/easing';
-import {page} from '$app/stores';
+import {page} from '$app/state';
 	import ProfileDash from './ProfileDash.svelte';
 	import SwitchButton from './SwitchButton.svelte';
 	let { data } = $props();
