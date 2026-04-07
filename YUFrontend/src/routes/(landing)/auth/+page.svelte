@@ -1,6 +1,6 @@
 <script>
-	import { login, register } from '$lib/api/auth';
-	import { setUser } from '$lib/stores/auth';
+	import { login, register } from '$lib/api/auth.js';
+	import { setUser } from '$lib/stores/auth.js';
 
 	let username = '';
 	let email = '';
