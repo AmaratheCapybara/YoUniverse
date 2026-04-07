@@ -1,5 +1,5 @@
 import * as  auth from '$lib/api/auth.js';
-import { Account } from '$lib/stores/Account.svelte..js';
+import { Account } from '$lib/stores/Account.svelte.js';
 
 const BASE_URL = 'http://localhost:3000/users';
 

@@ -12,7 +12,7 @@
 		Checkbox, 
 		Avatar,
 		Badge} from 'flowbite-svelte';
-    import {Account} from "$lib/stores/Account.svelte..js";
+    import {Account} from "$lib/stores/Account.svelte.js";
 	const headItems = ['Brand', 'Name', 'Color', 'Type', 'Price'];
 	const bodyItems = [
 		['Apple', 'MacBook Pro 17"', 'Sliver', 'Laptop', '$2999'],
