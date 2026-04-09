@@ -89,3 +89,7 @@ export function DeleteChat() {}
 export function CreateProfile() {}
 export function DeleteProfile() {}
 export function UpdateProfile() {}
+
+//loading page
+export function VolunteerSignup(){}
+export function Searching(SearchInput, list){}
