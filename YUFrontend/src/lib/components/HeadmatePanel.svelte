@@ -8,6 +8,7 @@ Search,
 Avatar 
 } from 'flowbite-svelte';
 import HeadmateButtonGroup from ''
+import {Account} from "$lib/stores/Account.svelte.js";
 let {
     FavoriteColor,
     ProfilePic,
@@ -19,6 +20,8 @@ let {
     text,
     timestamp
 } = $props();
+let Systems =Account.Profiles.filter((profiles)=> profiles.ProfileType === "System");
+let SpaceStations= ["Leaders", "Frequent Fronters", "Bonnie's Parts"]
 </script>
 
 		<div id="ButtonRow">
@@ -36,7 +39,7 @@ let {
 			{#each SpaceStations as SpaceStation}
 			<Button color={SpaceStation.FavoriteColor}>{SpaceStation.Name} <Avatar src={SpaceStation.ProfilePic}/></Button>
 			{/each}
-			{#each System as system}
+			{#each Systems as system}
 			<Button color={system.FavoriteColor}>{system.Name} <Avatar src={system.ProfilePic}/></Button>
 			
 			{/each}
