@@ -1,4 +1,6 @@
 import { Account } from '$lib/stores/Account.svelte.js';
+import {Profile} from "$lib/stores/Profile.svelte.js";
+import {Chat} from "$lib/stores/Chat.svelte.js";
 let {SelectedProfile=$bindable()} =$props()
 
 
@@ -50,9 +52,10 @@ export function RemoveFromFront(SelectedProfileID) {
 }
 export function SelectSender(NewSenderID) {
 	if (NewSenderID !== undefined || NewSenderID !== null) {
-
-
+		let Sender  = Account.Profiles.find((profile)=>profile.id === NewSenderID)
 		return Sender;
+
+
 	}
 	else if (NewSenderID === undefined) {
 		console.log("The NewSenderID is not getting into the function.")
@@ -61,3 +64,28 @@ export function SelectSender(NewSenderID) {
 
 	}
 }
+export function SendMessage(Sender,messageInput) {
+	if (messageInput !== undefined || messageInput !== null) {
+		Chat.MessageHistory = [
+			...Chat.MessageHistory,
+			{
+				sender:Sender,
+				text: messageInput,
+				timestamp: new Date()
+			}
+		]
+	}
+}
+
+export function CreateChat(FormData) {
+
+}
+export function AddChatParticipant() {
+	//some kind of option for continuing with the previous chats message history or starting new. this would only be for group chats
+	if (Chat.isGroupChat === false) {}
+		else if (Chat.isGroupChat === true) {}
+}
+export function DeleteChat() {}
+export function CreateProfile() {}
+export function DeleteProfile() {}
+export function UpdateProfile() {}

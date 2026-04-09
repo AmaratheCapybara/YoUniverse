@@ -2,9 +2,10 @@ export class ChatSkeleton {
     _id= $state("");
     AllowedSocialIDs = $state([]);
     MessageHistory = $state([]);
+    isGroupChat =$state(false);
     CSettings = $state([
         {
-            "Title":""
+            "name":"isGroupt"
         }
     ])
       
