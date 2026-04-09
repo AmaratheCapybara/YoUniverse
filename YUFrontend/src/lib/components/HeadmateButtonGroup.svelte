@@ -1,3 +1,9 @@
+ <script>
+	 import {
+		 ButtonGroup,
+			 Avatar
+	 } from "flowbite-svelte";
+ </script>
 <ButtonGroup>
 				{#each Profiles as sender}
 					<!-- Button with dynamically applied background color -->
