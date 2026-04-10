@@ -1,5 +1,7 @@
 <script>
-    let {FavoriteColor, TextColor} =$props();
+    import {MainThemeColors} from "$lib/stores/styling.svelte.js";
+
+    let {FavoriteColor, TextColor, PlaneAccentColor=MainThemeColors.ThirdLively} =$props();
 </script>
 
 <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
@@ -22,7 +24,7 @@
     "/>
     <polygon
             class="planeAccent"
-            fill="#F4A261"
+            fill={PlaneAccentColor}
             points="
       110,10
       130,50
