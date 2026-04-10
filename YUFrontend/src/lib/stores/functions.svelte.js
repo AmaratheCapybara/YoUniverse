@@ -1,6 +1,7 @@
 import { Account } from '$lib/stores/Account.svelte.js';
 import {Profile} from "$lib/stores/Profile.svelte.js";
 import {Chat} from "$lib/stores/Chat.svelte.js";
+import {ChangingColors} from "$lib/stores/styling.svelte.js";
 let {SelectedProfile=$bindable()} =$props()
 
 
@@ -93,3 +94,12 @@ export function UpdateProfile() {}
 //loading page
 export function VolunteerSignup(){}
 export function Searching(SearchInput, list){}
+
+
+
+
+//color pretty
+export function FindTextColor(FavoriteColor,TextColor){
+	TextColor = tinycolor.mostReadable(FavoriteColor,[ChangingColors.DarkmodeText, ChangingColors.LightmodeText])
+	return TextColor;
+}
