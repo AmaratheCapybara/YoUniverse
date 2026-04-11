@@ -6,7 +6,7 @@
 
     <ButtonGroup id="FooterButtons" class=" flex justify-stretch justify-center bg-[#77B602] center">
         <Button href="https://ko-fi.com/youniverseproject" class="basicBitchButton">Donation</Button>
-        <Button href="https://www.redbubble.com/people/TheYoUniverse/shop?asc=u"  class="bg-[#77B602]">Merch</Button>
+        <Button href="../getinvolved"  class="bg-[#77B602]">Get Involved</Button>
         <Button href="../about"  class="bg-[#77B602]">About</Button>
     </ButtonGroup>
 </Footer>
