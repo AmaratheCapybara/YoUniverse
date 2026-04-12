@@ -30,7 +30,7 @@ import {page} from '$app/state';
 	let menuOpen = $state(false);
 	let opensesame = $state();
 	let dropdownNotificationStatus = $state(false);
-	let closeDropdownNotification = opensesame.close;
+	let closeDropdownNotification = opensesame;
 	$effect(() => {
 		dropdownNotificationStatus = opensesame.isOpen;
 		

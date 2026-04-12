@@ -1,7 +1,7 @@
 <script>
 	import { Avatar, Sidebar, SidebarGroup, SidebarItem, SidebarButton, Listgroup, ListgroupItem } from 'flowbite-svelte';
 	import { ChartOutline, GridSolid, MailBoxSolid, UserSolid } from 'flowbite-svelte-icons';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
     let {
         AboutOpen=$bindable(true),
         StargazingOpen =$bindable(false),
@@ -11,7 +11,7 @@
 
         ...props
 
-    } =$props()
+    } =$props();
 	let activeUrl = $state($page.url.pathname);
 	//import PlusPlaceholder from '../../../utils/PlusPlaceholder.svelte';
 	const spanClass = 'flex-1 ms-3 whitespace-nowrap';
