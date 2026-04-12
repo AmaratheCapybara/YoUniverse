@@ -18,25 +18,25 @@ export class ProfileSkeleton {
     Systems = $state([]);
     PSettings = $state({
     "Third Party Connections": [
-        "SPMemberID"= "", 
-        "PKMemberID" ="",
-        "SPSync"= ["SP2YU", "YU2SP", "bothways"],
-        "PKSync"= ["PK2YU", "YU2PK", "bothways"],
-        "Middleware" =[
-            "Make YoUniverse Fronting Middleware" || //marks "YU2SP" and "YU2PK" on SPSync and PKSync
-            "Make Third Party services Fronting Middleware for YoUniverse"|| //marks "SP2YU" and "PK2YU" on SPSync and PKSync
-            "Sync Fronting across all services" //marks "bothways" on SPSync and PKSync
-        ]
+    //    "SPMemberID"= "",
+    //    "PKMemberID" ="",
+    //    "SPSync"= ["SP2YU", "YU2SP", "bothways"],
+     //   "PKSync"= ["PK2YU", "YU2PK", "bothways"],
+      //  "Middleware" =[
+      //      "Make YoUniverse Fronting Middleware" || //marks "YU2SP" and "YU2PK" on SPSync and PKSync
+     //       "Make Third Party services Fronting Middleware for YoUniverse"|| //marks "SP2YU" and "PK2YU" on SPSync and PKSync
+     //       "Sync Fronting across all services" //marks "bothways" on SPSync and PKSync
+    //    ]
     ],
     "Privacy": [
 
     ],
     "Moderation":[
-        "Allow Caution Badge When entering a chat to other participants"= ["True"||"False"], //default to none
-        "CensorshipOn"= ["True"|| "False"],
-        "Profanity censorship on"= ["True"|| "False"],
-        "Custom censorship on"= ["True"||"False"],
-        "Custom censors"=[ /*enter words that will be covered*/],
+     //   "Allow Caution Badge When entering a chat to other participants"= ["True"||"False"], //default to none
+      //  "CensorshipOn"= ["True"|| "False"],
+      //  "Profanity censorship on"= ["True"|| "False"],
+       // "Custom censorship on"= ["True"||"False"],
+     //   "Custom censors"=[ /*enter words that will be covered*/],
     ]
 })
 }

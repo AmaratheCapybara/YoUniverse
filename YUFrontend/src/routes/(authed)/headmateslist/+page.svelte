@@ -46,7 +46,7 @@ Account.Headmates = [];
     <TableBodyRow>no members listed
         <TableBodyCell>Apple MacBook Pro 17"</TableBodyCell>
        </TableBodyRow>
-    {:then} 
+    {:then data}
     {#each data.dummydata.Headmates as member}
 <TableBodyRow>
     <TableBodyCell class="!p-4">
@@ -55,7 +55,7 @@ Account.Headmates = [];
     <TableBodyCell>{member.name}</TableBodyCell>
     <TableBodyCell>{member.handle}</TableBodyCell>
     <TableBodyCell>
-		{#each subsystems as system}
+		{#each member.subsystems as system}
 			<Badge>
 		{member.system}
 			</Badge>

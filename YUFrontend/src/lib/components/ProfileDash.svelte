@@ -1,13 +1,13 @@
 <script>
     import { sineIn } from 'svelte/easing';
-	
+
     import {
         Dropdown,
-		DropdownUl,
-		DropdownLi,
-		DropdownHeader,
-		Footer,
-		Avatar,
+        DropdownUl,
+        DropdownLi,
+        DropdownHeader,
+        Footer,
+        Avatar, DropdownFooter,
     } from 'flowbite-svelte'
 	import { page } from '$app/stores';
     let { data } = $props();

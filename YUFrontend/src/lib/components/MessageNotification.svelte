@@ -1,6 +1,6 @@
 <script>
     import { Button, Dropdown, DropdownItem, DropdownHeader, DropdownGroup, Avatar } from "flowbite-svelte";
-    import { BellSolid, EyeSolid } from "flowbite-svelte-icons";
+    import { BellSolid, EyeSolid, MessageCaptionSolidclass } from "flowbite-svelte-icons";
   </script>
   
   <div id="bell" class="inline-flex items-center text-center text-sm font-medium text-gray-500 hover:text-gray-900 focus:outline-hidden dark:text-gray-400 dark:hover:text-white">
