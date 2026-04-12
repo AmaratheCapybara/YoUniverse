@@ -21,7 +21,7 @@ let {ProfilePic, Name}= $props();
 		{ name: 'Bonnie Green', checked: true }
 	];
 	let filteredItems = $derived(
-		people.filter((person) => person.name.toLowerCase().indexOf(searchTerm?.toLowerCase()) !== -1)
+		Profiles.filter((person) => person.name.toLowerCase().indexOf(searchTerm?.toLowerCase()) !== -1)
 	);
 
 	let dropdownSearch = $state();
