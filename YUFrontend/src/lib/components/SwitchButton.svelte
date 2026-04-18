@@ -32,15 +32,14 @@ let {ProfilePic, Name}= $props();
 <MegaMenu></MegaMenu>
 <!--
 <div class="flex h-60 items-start justify-center">
-	<Button onclick={dropdownSearch.toggle} color='#77B602'>
+	<Button class='switchbutton color='#77B602'>
 		<h1>Switch</h1>
 		<ChevronDownOutline class="ms-2 h-5 w-5 text-white dark:text-white" />
 	</Button>
-	{#if (Account.AccounType === "Polyfragmented")}
+	{#if (Account.AccountType === "Polyfragmented")}
 	<div class="relative">
 		<Dropdown
-			dropdownStatus={dropdownSearchStatus}
-			closeDropdown={closeDropdownSearch}
+			triggeredBy= ".switchbutton"
 			params={{ y: 0, duration: 200, easing: sineIn }}
 			class="absolute top-[40px] -left-[175px] w-52"
 		>
