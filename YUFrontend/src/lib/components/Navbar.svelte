@@ -29,12 +29,7 @@
 	let opensesame = $state();
 	let dropdownNotificationStatus = $state(false);
 	let closeDropdownNotification = opensesame;
-	$effect(() => {
-		dropdownNotificationStatus = opensesame.isOpen;
-		
-		//loginOpen = opensesame.isOpen;
 
-	});
 </script>
 
 <Navbar class="nav">
