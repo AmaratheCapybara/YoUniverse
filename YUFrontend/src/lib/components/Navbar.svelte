@@ -62,7 +62,7 @@
 
 -->
 
-		<ProfileDash bind:this={loginOpen} {data}/>
+		<ProfileDash SelectedProfile={Account.SelectedProfile}/>
 	
 
 
