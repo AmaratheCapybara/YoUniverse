@@ -65,8 +65,11 @@ export function SelectSender(NewSenderID) {
 
 	}
 }
-export function SendMessage(Sender,messageInput) {
+export function SendMessage(Sender, messageInput) {
 	if (messageInput !== undefined || messageInput !== null) {
+
+	}
+	if (messageInput === true && Sender.name !== "Sender") {
 		Chat.MessageHistory = [
 			...Chat.MessageHistory,
 			{
@@ -75,6 +78,7 @@ export function SendMessage(Sender,messageInput) {
 				timestamp: new Date()
 			}
 		]
+		return Chat.MessageHistory;
 	}
 }
 

@@ -7,7 +7,7 @@
         DropdownLi,
         DropdownHeader,
         Footer,
-        Avatar, DropdownFooter,
+        Avatar
     } from 'flowbite-svelte'
 	import { page } from '$app/stores';
     let { data } = $props();
@@ -17,7 +17,7 @@
     
     let dropdownUser = $state();
 	let dropdownUserStatus = $state(false);
-	let closeDropdownUser = dropdownUser.close;
+	let closeDropdownUser = dropdownUser;
     import LoginMini from './LoginMini.svelte';
 	import {logo} from  "$lib/images/blanklogotransparent.png";
 	import { BellSolid, EyeSolid } from 'flowbite-svelte-icons';
@@ -61,8 +61,7 @@
                 <DropdownLi href="/components/footer">Footer</DropdownLi>
                 <DropdownLi href="/components">Alert</DropdownLi>
             </DropdownUl>
-            <DropdownFooter class="px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600"
-                >Sign out</DropdownFooter
+
             >
         </Dropdown>
     </div>

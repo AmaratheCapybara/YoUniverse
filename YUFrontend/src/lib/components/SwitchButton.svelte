@@ -26,7 +26,7 @@ let {ProfilePic, Name}= $props();
 
 	let dropdownSearch = $state();
 	let dropdownSearchStatus = $state(false);
-	let closeDropdownSearch = dropdownSearch.close;
+	let closeDropdownSearch = dropdownSearch;
 	$effect(() => {
 		dropdownSearchStatus = dropdownSearch.isOpen;
 	});

@@ -18,13 +18,13 @@
 	import { BellSolid, EyeSolid, MessageCaptionSolid } from 'flowbite-svelte-icons';
 	//for dropdown
 	import { sineIn } from 'svelte/easing';
-import {page} from '$app/state';
+//import {page} from '$app/state';
 	import ProfileDash from './ProfileDash.svelte';
 	import SwitchButton from './SwitchButton.svelte';
 	let { data } = $props();
 
 
-	let session = $derived($page.data.session);
+	//let session = $derived($page.data.session);
 	let authed =  $state(false);
 	let loginOpen = $state(false);
 	let menuOpen = $state(false);
@@ -52,7 +52,7 @@ import {page} from '$app/state';
 		<NavHamburger class="w-full md:flex md:w-auto md:order-1" />
 		<!-- Hamburger (mobile only) -->
 		
-		{#if (!$page.data.session)}
+	<!--	{#if (!$page.data.session)}
 		
 	<h1>test</h1>
 {:else if ($page.data.session)}
@@ -62,7 +62,7 @@ import {page} from '$app/state';
 </NavUl>
 		{/if}
 
-
+-->
 
 		<ProfileDash bind:this={loginOpen} {data}/>
 	
