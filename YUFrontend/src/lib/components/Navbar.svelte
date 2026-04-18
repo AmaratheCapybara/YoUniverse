@@ -2,10 +2,9 @@
 	import {
 		Avatar, 
 		Dropdown,
-		DropdownUl,
-		DropdownLi,
+		DropdownItem,
 		DropdownHeader,
-		DropdownFooter,
+		Footer,
 		MegaMenu,
 		
 		Button,
@@ -13,15 +12,14 @@
 		NavBrand, NavHamburger, NavUl, NavLi,} from 'flowbite-svelte';
 		
 	import LoginMini from './LoginMini.svelte';
-	import {logo} from  
-	'../images/blanklogotransparent.png';
+	//import {logo} from '../images/blanklogotransparent.png';
 	import { BellSolid, EyeSolid, MessageCaptionSolid } from 'flowbite-svelte-icons';
 	//for dropdown
 	import { sineIn } from 'svelte/easing';
 //import {page} from '$app/state';
 	import ProfileDash from './ProfileDash.svelte';
 	import SwitchButton from './SwitchButton.svelte';
-	let { data } = $props();
+	let { data, logo} = $props();
 
 
 	//let session = $derived($page.data.session);

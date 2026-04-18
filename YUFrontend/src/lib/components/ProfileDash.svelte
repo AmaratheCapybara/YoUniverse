@@ -3,14 +3,18 @@
 
     import {
         Dropdown,
-        DropdownUl,
-        DropdownLi,
+        DropdownItem,
         DropdownHeader,
+        DropdownGroup,
         Footer,
         Avatar
     } from 'flowbite-svelte'
 	import { page } from '$app/stores';
-    let { data } = $props();
+    let { data,
+        SelectedProfile =
+            {Name:'Profile Name', Handle:'ProfileHandle'}
+
+    } = $props();
 
 
 	let activeUrl = $state($page.url.pathname);
@@ -19,7 +23,7 @@
 	let dropdownUserStatus = $state(false);
 	let closeDropdownUser = dropdownUser;
     import LoginMini from './LoginMini.svelte';
-	import {logo} from  "$lib/images/blanklogotransparent.png";
+	//import {logo} from  "$lib/images/blanklogotransparent.png";
 	import { BellSolid, EyeSolid } from 'flowbite-svelte-icons';
 	
 	
@@ -38,31 +42,25 @@
 
 <div class="flex items-center space-x-1 md:order-2">
     <Avatar
-        onclick={dropdownUser.toggle}
-       
+      class ='acs'
         dot={{ color: 'grey' }}
         src="https://api.dicebear.com/6.x/thumbs/svg?seed=LoginUser"
 					alt="User avatar"
     />
     <div class="relative">
         <Dropdown
-            dropdownStatus={dropdownUserStatus}
-            closeDropdown={closeDropdownUser}
+           triggeredBy=".acs"
             params={{ y: 0, duration: 200, easing: sineIn }}
             class="absolute top-[14px] -left-[110px] md:-left-[160px] "
         >
             <DropdownHeader class="px-4 py-2">
-                <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
-                <span class="block truncate text-sm font-medium">name@flowbite.com</span>
+                <span class="block text-sm text-gray-900 dark:text-white">{SelectedProfile.Name}</span>
+                <span class="block truncate text-sm font-medium">{SelectedProfile.Handle}</span>
             </DropdownHeader>
-            <DropdownUl>
-                <DropdownLi href="/">Dashboard</DropdownLi>
-                <DropdownLi href="/components/drawer">Drawer</DropdownLi>
-                <DropdownLi href="/components/footer">Footer</DropdownLi>
-                <DropdownLi href="/components">Alert</DropdownLi>
-            </DropdownUl>
-
-            >
+            <DropdownGroup>
+                <DropdownItem>Settings</DropdownItem>
+            </DropdownGroup>
+            <Footer>Sign Out</Footer>
         </Dropdown>
     </div>
   

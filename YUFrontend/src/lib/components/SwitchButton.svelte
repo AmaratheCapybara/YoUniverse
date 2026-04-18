@@ -3,10 +3,8 @@
 	import {
 		Button,
 		Dropdown,
-		DropdownUl,
-		DropdownLi,
 		DropdownHeader,
-		DropdownFooter,
+		Footer,
 		Search,
 		Checkbox,
 		MegaMenu
