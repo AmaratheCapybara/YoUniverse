@@ -37,11 +37,11 @@
 	});
 </script>
 
-<Navbar class="bg-[#77B602] px-4 py-3 rounded-xl shadow-md ">
+<Navbar class="nav">
 	
 		<!-- Brand -->
 		<NavBrand href="/">
-			<img src={logo} class="me-3 h-6 sm:h-9" alt="YoUniverse logo" />
+			<img src="$lib/images/logo.png" class="me-3 h-6 sm:h-9" alt="YoUniverse logo" />
 			<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"
 				>YoUniverse</span
 			>
