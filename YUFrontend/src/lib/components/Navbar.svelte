@@ -17,11 +17,11 @@
 	//for dropdown
 	import { sineIn } from 'svelte/easing';
 //import {page} from '$app/state';
-
+	import logo from "../images/blanklogotransparent.png";
 	import ProfileDash from './ProfileDash.svelte';
 	import SwitchButton from './SwitchButton.svelte';
 	import {MainThemeColors} from "$lib/stores/styling.svelte.js";
-	let { data, logo} = $props();
+	let { data} = $props();
 
 
 	//let session = $derived($page.data.session);
