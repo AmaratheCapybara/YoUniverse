@@ -10,15 +10,17 @@
 		Button,
 		Navbar,
 		NavBrand, NavHamburger, NavUl, NavLi,} from 'flowbite-svelte';
-		
+		import {Account} from "$lib/stores/Account.svelte.js";
 	import LoginMini from './LoginMini.svelte';
 	//import {logo} from '../images/blanklogotransparent.png';
 	import { BellSolid, EyeSolid, MessageCaptionSolid } from 'flowbite-svelte-icons';
 	//for dropdown
 	import { sineIn } from 'svelte/easing';
 //import {page} from '$app/state';
+
 	import ProfileDash from './ProfileDash.svelte';
 	import SwitchButton from './SwitchButton.svelte';
+	import {MainThemeColors} from "$lib/stores/styling.svelte.js";
 	let { data, logo} = $props();
 
 
@@ -31,12 +33,11 @@
 	let closeDropdownNotification = opensesame;
 
 </script>
-
-<Navbar class="nav">
-	
+<div class="relative px-8 flex-grow min-w-full">
+<Navbar class="nav" color={MainThemeColors.AccentColor} fluid>
 		<!-- Brand -->
-		<NavBrand href="/">
-			<img src="$lib/images/logo.png" class="me-3 h-6 sm:h-9" alt="YoUniverse logo" />
+		<NavBrand href="/"  class="button">
+			<img src={logo} class="me-3 h-6 sm:h-9" alt="YoUniverse logo" />
 			<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"
 				>YoUniverse</span
 			>
@@ -56,28 +57,35 @@
 		{/if}
 
 -->
+	<NavUl>
+<Button class="button" href="./about" color={MainThemeColors.AccentColor}>About</Button>
+	<Button class="button" href="./goals" color={MainThemeColors.AccentColor}>Goals</Button>
+	<Button class="button" href="./announcements" color={MainThemeColors.AccentColor}>Announcements</Button>
+	<Button class="button" href ="./volunteeropportunities" color={MainThemeColors.AccentColor}>Help Out!</Button>
+	<Button class="button" href= "./donation" color={MainThemeColors.AccentColor}>Donation</Button>
+	<Button class="button" href="./contact" color={MainThemeColors.AccentColor}>Contact</Button>
+		<!-- Mobile menu -->
+		<!--{#if (menuOpen===true)}
+            <div class="md:hidden mt-3 flex flex-col space-y-2">
 
-		<ProfileDash SelectedProfile={Account.SelectedProfile}/>
-	
+                <div class="relative">
+                    <button onclick={loginOpen.toggle}>
+                    Login
+                    </button>
+
+                    {#if (loginOpen===true)}
+                        <div class="absolute mt-2 w-64 bg-white border border-gray-300 shadow-xl rounded z-50">
+                            <LoginMini />
+                        </div>
+                    {/if}
+                </div>
+            </div>
+        {/if}
+    -->
+	</NavUl>
 
 
-	<!-- Mobile menu -->
-	{#if (menuOpen===true)}
-		<div class="md:hidden mt-3 flex flex-col space-y-2">
-			 
-			<div class="relative">
-				<button onclick={loginOpen.toggle}>
-				h
-				</button>
-
-				{#if (loginOpen===true)}
-					<div class="absolute mt-2 w-64 bg-white border border-gray-300 shadow-xl rounded z-50">
-						<LoginMini />
-					</div>
-				{/if}
-			</div>
-		</div>
-	{/if}
 
 	
 	</Navbar>
+</div>

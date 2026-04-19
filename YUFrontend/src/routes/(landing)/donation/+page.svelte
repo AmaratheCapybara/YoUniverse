@@ -1,5 +1,5 @@
 <script>
-    import '../../app.css';
+    import '../../../app.css';
     import { Card, Button} from 'flowbite-svelte';
 
     import PatreonSymbol from '$lib/images/fhd_Patreon_Symbol_6fff9723d3.png'
@@ -10,7 +10,7 @@
     /** @type {{ data: import('./$types').PageData }} */
     let { data } = $props();
 </script>
-<DonateWindow></DonateWindow>
+<!--<DonateWindow></DonateWindow>-->
 <div class="card">
 	<h1 class='max-w-full'>Custom amount donated monthly</h1><h3 class="mx-auto">or...</h3>
 	<iframe id='kofiframe' src='https://ko-fi.com/youniverseproject/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='youniverseproject'></iframe>

@@ -1,6 +1,6 @@
 <script>
 	import {Button, Badge } from "flowbite-svelte";
-	import Search from "$lib/components/Search";
+//import Search from '$lib/components/Search';
 	let opportunities = [
 		{ name: '', description:'', theneeddos: '', team: '', status: '', howtoapply: ''},
 		{
@@ -38,7 +38,7 @@
 	];
 </script>
 
-<Search Placeholder="Find Specific Opportunities" ListArray="{opportunities}"></Search>
+<!--<Search Placeholder="Find Specific Opportunities" ListArray="{opportunities}"></Search>-->
 {#snippet Opportunity(name, theneeddos, team, status, howtoapply)}
 <header><h2>{name}</h2> <h4>{status}</h4>
 </header>

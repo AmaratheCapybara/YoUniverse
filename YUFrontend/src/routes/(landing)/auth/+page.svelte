@@ -22,9 +22,11 @@
 		}
 	}
 </script>
-
+<div class="card">
+	<h1 class="text-[#FF6F61]">Registration is open for alpha testers only at this moment</h1>
+</div>
 <h1 class="text-xl font-bold mb-4">{isLogin ? 'Login' : 'Register'}</h1>
-
+<div class="card">
 <form on:submit|preventDefault={handleSubmit} class="space-y-4">
 	{#if !isLogin}
 		<div>
@@ -48,10 +50,10 @@
 	</button>
 </form>
 
-<button on:click={() => isLogin = !isLogin} class="mt-4 text-sm text-blue-600 hover:underline">
+<button on:click={() => isLogin = !isLogin} class="mt-4 text-sm hover:underline">
 	{isLogin ? 'Need an account?' : 'Already have an account?'}
 </button>
-
+</div>
 {#if error}
 	<p class="text-red-500 mt-2">{error}</p>
 {/if}
