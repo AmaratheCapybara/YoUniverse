@@ -9,7 +9,12 @@
 		
 		Button,
 		Navbar,
-		NavBrand, NavHamburger, NavUl, NavLi,} from 'flowbite-svelte';
+		NavBrand,
+		NavHamburger,
+		NavUl,
+		NavLi,
+			DarkMode
+	} from 'flowbite-svelte';
 		import {Account} from "$lib/stores/Account.svelte.js";
 	import LoginMini from './LoginMini.svelte';
 	//import {logo} from '../images/blanklogotransparent.png';
@@ -20,12 +25,17 @@
 	import logo from "../images/blanklogotransparent.png";
 	import ProfileDash from './ProfileDash.svelte';
 	import SwitchButton from './SwitchButton.svelte';
-	import {MainThemeColors} from "$lib/stores/styling.svelte.js";
+	import {MainThemeColors, ScreenColors} from "$lib/stores/styling.svelte.js";
+	import {ChangeScreenMode} from "$lib/stores/functions.svelte.js";
+	import SiteInfoNav from "$lib/components/SiteInfoNav.svelte";
+	import Notifications from "$lib/components/Notifications.svelte";
+	import MessageNotification from "$lib/components/MessageNotification.svelte";
+
 	let { data} = $props();
 
 
 	//let session = $derived($page.data.session);
-	let authed =  $state(false);
+	let authed =  $state(true);
 	let loginOpen = $state(false);
 	let menuOpen = $state(false);
 	let opensesame = $state();
@@ -57,35 +67,72 @@
 		{/if}
 
 -->
-	<NavUl>
-<Button class="button" href="./about" color={MainThemeColors.AccentColor}>About</Button>
-	<Button class="button" href="./goals" color={MainThemeColors.AccentColor}>Goals</Button>
-	<Button class="button" href="./announcements" color={MainThemeColors.AccentColor}>Announcements</Button>
-	<Button class="button" href ="./volunteeropportunities" color={MainThemeColors.AccentColor}>Help Out!</Button>
-	<Button class="button" href= "./donation" color={MainThemeColors.AccentColor}>Donation</Button>
-	<Button class="button" href="./contact" color={MainThemeColors.AccentColor}>Contact</Button>
-		<!-- Mobile menu -->
-		<!--{#if (menuOpen===true)}
-            <div class="md:hidden mt-3 flex flex-col space-y-2">
-
-                <div class="relative">
-                    <button onclick={loginOpen.toggle}>
-                    Login
-                    </button>
-
-                    {#if (loginOpen===true)}
-                        <div class="absolute mt-2 w-64 bg-white border border-gray-300 shadow-xl rounded z-50">
-                            <LoginMini />
-                        </div>
-                    {/if}
-                </div>
-            </div>
-        {/if}
-    -->
-	</NavUl>
 
 
 
-	
+	{#if (authed)}
+<NavUl>
+<SiteInfoNav/>
+	<SwitchButton/>
+<Notifications/>
+<MessageNotification/>
+
+</NavUl>
+<ProfileDash/>
+		{:else if (!authed)}
+		<NavUl>
+			<Button class="button" href="./about" color={MainThemeColors.AccentColor}>About</Button>
+			<Button class="button" href="./goals" color={MainThemeColors.AccentColor}>Goals</Button>
+			<Button class="button" href="./announcements" color={MainThemeColors.AccentColor}>Announcements</Button>
+			<Button class="button" href ="./volunteeropportunities" color={MainThemeColors.AccentColor}>Help Out!</Button>
+			<Button class="button" href= "./donation" color={MainThemeColors.AccentColor}>Donation</Button>
+			<Button class="button" href="./contact" color={MainThemeColors.AccentColor}>Contact</Button>
+			<Button class="button"
+			        color={MainThemeColors.AccentColor}
+			        onclick={() => loginOpen =!loginOpen}>Login
+			</Button>
+		</NavUl>
+		{:else }
+		<NavUl>
+			<Button class="button" href="./about" color={MainThemeColors.AccentColor}>About</Button>
+			<Button class="button" href="./goals" color={MainThemeColors.AccentColor}>Goals</Button>
+			<Button class="button" href="./announcements" color={MainThemeColors.AccentColor}>Announcements</Button>
+			<Button class="button" href ="./volunteeropportunities" color={MainThemeColors.AccentColor}>Help Out!</Button>
+			<Button class="button" href= "./donation" color={MainThemeColors.AccentColor}>Donation</Button>
+			<Button class="button" href="./contact" color={MainThemeColors.AccentColor}>Contact</Button>
+			<Button class="button"
+			        color={MainThemeColors.AccentColor}
+			        onclick={() => loginOpen =!loginOpen}>Login
+			</Button>
+
+
+		</NavUl>
+		{/if}
 	</Navbar>
+	{#if (loginOpen===true)}
+		<div class="absolute mt-2 w-64 bg-white border border-gray-300 shadow-xl rounded z-50">
+			<LoginMini />
+		</div>
+	{/if}
 </div>
+
+
+
+<!-- Mobile menu -->
+<!--{#if (menuOpen===true)}
+    <div class="md:hidden mt-3 flex flex-col space-y-2">
+
+        <div class="relative">
+            <button onclick={loginOpen.toggle}>
+            Login
+            </button>
+
+            {#if (loginOpen===true)}
+                <div class="absolute mt-2 w-64 bg-white border border-gray-300 shadow-xl rounded z-50">
+                    <LoginMini />
+                </div>
+            {/if}
+        </div>
+    </div>
+{/if}
+-->

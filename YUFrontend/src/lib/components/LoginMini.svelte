@@ -2,6 +2,7 @@
 	import { login } from '$lib/api/auth';
 	import { setUser } from '$lib/stores/auth';
 	import { goto } from '$app/navigation';
+	import {ChangingColors, MainThemeColors, ScreenColors} from "$lib/stores/styling.svelte.js";
 
 	let username = '';
 	let password = '';
@@ -31,7 +32,7 @@
 		Log In
 	</button>
 
-	<button on:click={goToRegister} class="text-sm text-[#77B602] hover:underline w-full hover:text-[#FF6F61]">
+	<button on:click={goToRegister} class="text-sm text-[{ScreenColors.TextColor}] hover:underline w-full hover:text-[{MainThemeColors.ThirdLively}]">
 		Create an account
 	</button>
 

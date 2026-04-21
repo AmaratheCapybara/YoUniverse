@@ -12,16 +12,19 @@
 	import { page } from '$app/stores';
     let { data,
         SelectedProfile =
-            {Name:'Profile Name', Handle:'ProfileHandle'}
+            {Name:'Profile Name', Handle:'ProfileHandle',ProfilePic:"https://api.dicebear.com/6.x/thumbs/svg?seed=LoginUser"},
+        Fronters =[
+            {Name:'Profile Name', Handle:'ProfileHandle',ProfilePic:"https://api.dicebear.com/6.x/thumbs/svg?seed=LoginUser"},
+            {Name:'Profile Name 1', Handle:'ProfileHandle 1',ProfilePic:"https://api.dicebear.com/6.x/thumbs/svg?seed=LoginUser"},
+            {Name:'Profile Name 2', Handle:'ProfileHandle 2',ProfilePic:undefined}
+        ]
 
     } = $props();
 
 
 	let activeUrl = $state($page.url.pathname);
     
-    let dropdownUser = $state();
-	let dropdownUserStatus = $state(false);
-	let closeDropdownUser = dropdownUser;
+
     import LoginMini from './LoginMini.svelte';
 	//import {logo} from  "$lib/images/blanklogotransparent.png";
 	import { BellSolid, EyeSolid } from 'flowbite-svelte-icons';
@@ -33,11 +36,28 @@
 	
 	let loginOpen = $state(false);
 	let menuOpen = false;
-	$effect(() => {
-		dropdownUserStatus = dropdownUser.isOpen;
-		activeUrl = $page.url.pathname;
-	});
+
 </script>
+<Avatar id="DashIcon" src={SelectedProfile.ProfilePic}/>
+<Dropdown triggeredBy="#DashIcon">
+    <DropdownHeader>
+<h1>{SelectedProfile.Name}</h1>
+        <span><h2>#{SelectedProfile.Handle}</h2></span>
+    </DropdownHeader>
+    <DropdownGroup>
+        {#each Fronters as Fronter}
+            <DropdownItem>{Fronter.Name}</DropdownItem>
+            {/each}
+    </DropdownGroup>
+    <DropdownGroup>
+        <DropdownItem>Settings</DropdownItem>
+        <DropdownItem>Logout</DropdownItem>
+    </DropdownGroup>
+</Dropdown>
+
+
+
+<!--
 {#if ($page.data.session)}
 
 <div class="flex items-center space-x-1 md:order-2">
@@ -84,8 +104,9 @@
 </div>
 
 
-
+-->
 <!-- Mobile menu -->
+<!--
 {#if menuOpen}
 <div class="md:hidden mt-3 flex flex-col space-y-2">
 <a href="/" class="text-gray-700 hover:text-blue-500">Home</a>
@@ -109,3 +130,4 @@
 {:else}
 <p>Error when checking authentication. Refresh or try to login.</p>
 {/if}
+-->

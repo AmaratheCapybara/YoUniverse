@@ -10,6 +10,7 @@
 		MegaMenu
 	} from 'flowbite-svelte';
 	import { ChevronDownOutline, UserRemoveSolid } from 'flowbite-svelte-icons';
+    import {MainThemeColors} from "$lib/stores/styling.svelte.js";
 
 let {ProfilePic, Name}= $props();
 	let searchTerm = $state('');
@@ -25,11 +26,12 @@ let {ProfilePic, Name}= $props();
 	let dropdownSearch = $state();
 	let dropdownSearchStatus = $state(false);
 	let closeDropdownSearch = dropdownSearch;
-	$effect(() => {
+	/*$effect(() => {
 		dropdownSearchStatus = dropdownSearch.isOpen;
-	});
+	});*/
 </script>
-<MegaMenu></MegaMenu>
+<Button class="button"  id="switchbutton" color={MainThemeColors.AccentColor}>Switch</Button>
+
 <!--
 <div class="flex h-60 items-start justify-center">
 	<Button class='switchbutton color='#77B602'>

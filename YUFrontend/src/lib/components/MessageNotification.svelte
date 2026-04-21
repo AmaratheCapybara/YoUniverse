@@ -1,15 +1,27 @@
 <script>
     import { Button, Dropdown, DropdownItem, DropdownHeader, DropdownGroup, Avatar } from "flowbite-svelte";
-    import { BellSolid, EyeSolid, MessageCaptionSolidclass } from "flowbite-svelte-icons";
+    import { BellSolid, EyeSolid, MessagesSolid} from "flowbite-svelte-icons";
+    import {ChangingColors, MainThemeColors, ScreenColors} from "$lib/stores/styling.svelte.js";
+    let {
+Sender ={
+  Name: "Sender name",
+},
+Message={
+  Sender,
+  MessageInput: "Hey, what's up? All set for the presentation?",
+  Timestamp: "Wed Nov 26 2014 15:01:23 GMT+0100 (CET)"
+
+}
+    } =$props();
   </script>
   
   <div id="bell" class="inline-flex items-center text-center text-sm font-medium text-gray-500 hover:text-gray-900 focus:outline-hidden dark:text-gray-400 dark:hover:text-white">
-    <MessageCaptionSolidclass class="h-8 w-8" />
+    <MessagesSolid class="shrink-0 h-6 w-6" color={ScreenColors.TextColor}/>
     <div class="relative flex">
       <div class="relative end-4 -top-2 inline-flex h-3 w-3 rounded-full border-2 border-white bg-red-500 dark:border-gray-900"></div>
     </div>
   </div>
-  <Dropdown triggeredBy="#bell" class="w-full max-w-sm divide-y divide-gray-100 rounded-sm shadow-sm dark:divide-gray-700 dark:bg-gray-800">
+  <Dropdown triggeredBy="#bell" class="w-full max-w-sm divide-y divide-gray-100 rounded-sm shadow-sm dark:divide-gray-700 dark:bg-gray-800" color={ScreenColors.BackgroundColor}>
     <div class="py-2 text-center font-bold">Messages</div>
     <DropdownGroup>
       <DropdownItem class="flex space-x-4 rtl:space-x-reverse">
@@ -54,3 +66,21 @@
       </div>
     </a>
   </Dropdown>
+
+
+<!--Snippets-->
+{#snippet MessageNotification(Message)}
+
+  <DropdownItem color={ScreenColors.BackgroundColor}>
+<Avatar rounded/>
+    <div class="w-full ps-3">
+      <div>New Message from <span>{Message.Sender.Name}</span> : {Message.MessageInput}}</div>
+    </div>
+  </DropdownItem>
+  {/snippet}
+{#snippet ChatGroupCreation()}
+  <Avatar rounded/>
+  {/snippet}
+{#snippet MessageRequest()}
+  <Avatar rounded/>
+{/snippet}
