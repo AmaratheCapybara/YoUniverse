@@ -136,7 +136,12 @@ footer, .footer {
     justify-content: center;
     align-content: center;
 }
-
+#ChatBody {
+    min-height: 60%;
+    height: 60%;
+    max-height: 60%;
+    overflow-y: scroll;
+}
   /* disable chrome cancel button */
   input[type="search"]::-webkit-search-cancel-button {
     display: none;
