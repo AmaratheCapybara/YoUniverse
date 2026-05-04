@@ -59,7 +59,7 @@ Message={
         </div>
       </DropdownItem>
     </DropdownGroup>
-    <a href="/" class="-my-1 block bg-gray-50 py-2 text-center text-sm font-medium text-gray-900 hover:bg-gray-100 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">
+    <a href="/YUFrontend/static" class="-my-1 block bg-gray-50 py-2 text-center text-sm font-medium text-gray-900 hover:bg-gray-100 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">
       <div class="inline-flex items-center">
         <EyeSolid class="me-2 h-4 w-4 text-gray-500 dark:text-gray-400" />
         View all

@@ -16,20 +16,20 @@
 			DarkMode
 	} from 'flowbite-svelte';
 		import {Account} from "$lib/stores/Account.svelte.js";
-	import LoginMini from './LoginMini.svelte';
+	import LoginMini from '../LoginMini.svelte';
 	//import {logo} from '../images/blanklogotransparent.png';
 	import { BellSolid, EyeSolid, MessageCaptionSolid } from 'flowbite-svelte-icons';
 	//for dropdown
 	import { sineIn } from 'svelte/easing';
 //import {page} from '$app/state';
-	import logo from "../images/blanklogotransparent.png";
-	import ProfileDash from './ProfileDash.svelte';
-	import SwitchButton from './SwitchButton.svelte';
+	import logo from "../../images/blanklogotransparent.png";
+	import ProfileDash from '../ProfileDash.svelte';
+	import SwitchButton from '../miniponents/SwitchButton.svelte';
 	import {MainThemeColors, ScreenColors} from "$lib/stores/styling.svelte.js";
 	import {ChangeScreenMode} from "$lib/stores/functions.svelte.js";
-	import SiteInfoNav from "$lib/components/SiteInfoNav.svelte";
-	import Notifications from "$lib/components/Notifications.svelte";
-	import MessageNotification from "$lib/components/MessageNotification.svelte";
+	import SiteInfoNav from "$lib/components/blocks/SiteInfoNav.svelte";
+	import Notifications from "$lib/components/miniponents/Notifications.svelte";
+	import MessageNotification from "$lib/components/miniponents/MessageNotification.svelte";
 
 	let { data} = $props();
 

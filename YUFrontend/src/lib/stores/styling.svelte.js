@@ -11,7 +11,8 @@ export const ChangingColors = {
 	DarkmodeText: '#FFFFFF'
 };
 //export const Screenmode = window.matchMedia;   //Svelte Hates "window" as usual
-export const ScreenColors = $state({
+export const ScreenColors = $state(
+	{
 	Theme: 'light',
 	MainThemeColors: MainThemeColors,
 	BackgroundColor:ChangingColors.LightmodeBackground,

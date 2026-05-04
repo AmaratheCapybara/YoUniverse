@@ -1,7 +1,7 @@
 <script>
 	import { Drawer, Drawerhead, Button,  Avatar } from 'flowbite-svelte';
 	import { InfoCircleSolid } from 'flowbite-svelte-icons';
-	import ProfileNav from './ProfileNav.svelte';
+	import ProfileNav from '../ProfileNav.svelte';
 	
 	let drawerStatus = $state(true);
 	let drawer= $state();

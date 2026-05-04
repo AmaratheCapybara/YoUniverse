@@ -4,6 +4,7 @@ import { Profile } from '$lib/stores/Profile.svelte.js';
 import { Chat } from '$lib/stores/Chat.svelte.js';
 import * as Themes from '$lib/stores/styling.svelte.js';
 import { ScreenColors } from '$lib/stores/styling.svelte.js';
+import tinycolor from "tinycolor2";
 
 export function changeProfile(NewProfileID) {
 	if (NewProfileID !== undefined || NewProfileID !== null) {
