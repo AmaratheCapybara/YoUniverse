@@ -10,7 +10,7 @@
 					<!-- Button with dynamically applied background color -->
 					<button
 						class="sender-button {sender === senderInput ? 'active' : ''}"
-						on:click={() => setSender(sender)}
+						onclick={() => setSender(sender)}
 						style="background-color: {sender.FavoriteColor}"
 					>
 						<span>{sender.Name}</span>
