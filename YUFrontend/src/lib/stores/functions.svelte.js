@@ -61,7 +61,7 @@ export function SelectSender(NewSenderID) {
 	}
 }
 export function SendMessage(Sender, messageInput) {
-	if (messageInput !== undefined || messageInput !== null) {
+	if (messageInput !== undefined || true) {
 	}
 	if (messageInput === true && Sender.name !== 'Sender') {
 		Chat.MessageHistory = [

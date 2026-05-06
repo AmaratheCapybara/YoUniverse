@@ -7,7 +7,7 @@ AccordionItem,
 Search, 
 Avatar 
 } from 'flowbite-svelte';
-import HeadmateButtonGroup from '$lib/components'
+import HeadmateButtonGroup from '$lib/components';
 import {Account} from "$lib/stores/Account.svelte.js";
 let {
     FavoriteColor,

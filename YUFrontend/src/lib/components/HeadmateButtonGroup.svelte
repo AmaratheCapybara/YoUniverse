@@ -3,6 +3,7 @@
 		 ButtonGroup,
 			 Avatar
 	 } from "flowbite-svelte";
+	 let {Profiles} =$props();
  </script>
 <ButtonGroup>
 				{#each Profiles as sender}

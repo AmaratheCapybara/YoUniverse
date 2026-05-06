@@ -12,8 +12,17 @@
         messageInput
     } = $props();
 </script>
-<span><input type="text" bind:value={messageInput}/>
-<button onclick={SendMessage(Sender, messageInput)} disabled={!senderInput} style="background-color: {Sender.FavoriteColor}">
-    <img src={Sender.ProfilePic} alt={sender} > Send
+<span><input type="text" bind:value={messageInput} class="grow-7"/>
+<button onclick={SendMessage(Sender, messageInput)} >
+    <img src={Sender.ProfilePic} alt={Sender}/> Send
    </button>
 </span>
+<style>
+    input {
+        width: 80%;
+        min-width: 50%;
+    }
+    img {
+        max-width: 40px;
+    }
+</style>
