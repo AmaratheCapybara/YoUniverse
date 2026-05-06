@@ -20,7 +20,7 @@ let {
     text,
     timestamp
 } = $props();
-let Systems =Account.Profiles.filter((profiles)=> profiles.ProfileType === "System");
+let Systems = Account.Profiles.filter((profiles)=> profiles.ProfileType === "System");
 let SpaceStations= ["Leaders", "Frequent Fronters", "Bonnie's Parts"]
 </script>
 
