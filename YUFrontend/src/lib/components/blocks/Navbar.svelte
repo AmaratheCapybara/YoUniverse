@@ -35,7 +35,7 @@
 
 
 	//let session = $derived($page.data.session);
-	let authed =  $state(true);
+	let authed =  $state(false);
 	let loginOpen = $state(false);
 	let menuOpen = $state(false);
 	let opensesame = $state();
