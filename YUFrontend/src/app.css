@@ -136,12 +136,15 @@ footer, .footer {
     justify-content: center;
     align-content: center;
 }
-#ChatBody {
-    min-height: 60%;
-    height: 60%;
-    max-height: 60%;
-    overflow-y: scroll;
+#ChatBody { /*look i just copy and pasted from svelte playground. I think it looks to short but that's just meeee. please fix -Edawg*/
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    max-height: 350px;
+    min-height: 350px;
+    overflow-y: auto;
 }
+
   /* disable chrome cancel button */
   input[type="search"]::-webkit-search-cancel-button {
     display: none;

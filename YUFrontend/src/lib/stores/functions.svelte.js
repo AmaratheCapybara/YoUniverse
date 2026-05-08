@@ -60,23 +60,35 @@ export function SelectSender(NewSenderID) {
 	} else if (NewSenderID === null) {
 	}
 }
-export function SendMessage(Sender, messageInput) {
-	if (messageInput !== undefined || true) {
+export async function SendMessage(messageInput) {
+	if (!messageInput.exists) { //TODO figure out why the messageInput isn't making it into the function
+		const ErrorMessage = "hol' up buckaroo. I ain't getting ya' fancy letter";
+		console.log(ErrorMessage);
+		return;
+
 	}
-	if (messageInput === true && Sender.name !== 'Sender') {
-		Chat.MessageHistory = [
-			...Chat.MessageHistory,
-			{
-				sender: Sender,
-				text: messageInput,
-				timestamp: new Date()
-			}
-		];
-		return Chat.MessageHistory;
+	if (!messageInput.Sender.exists) {
+		const ErrorMessage= 'who You?';
+		console.log(ErrorMessage);
+		return;
+	}
+	if (messageInput.Sender.exists) {
+	const	MessageID = crypto.randomUUID();
+let NewMessage = {
+	MessageID: MessageID,
+	Sender: messageInput.Sender,
+	Timestamp: new Date(),
+	Text: messageInput.messageText
+
+}
+Chat.MessageHistory.push(NewMessage);
+console.log(NewMessage);
 	}
 }
 
-export function CreateChat(FormData) {}
+export function CreateChat(NewChatFormData) {
+
+}
 export function AddChatParticipant() {
 	//some kind of option for continuing with the previous chats message history or starting new. this would only be for group chats
 	if (Chat.isGroupChat === false) {
@@ -84,13 +96,55 @@ export function AddChatParticipant() {
 	}
 }
 export function DeleteChat() {}
-export function CreateProfile() {}
+export function CreateProfile(NewProfileForm) {
+	const SocialID = crypto.randomUUID();
+	const ProfileID = crypto.randomUUID();
+
+	if (NewProfileForm === undefined || NewProfileForm === null) {
+		const ErrorMessage = "ain't getting the new profile form, chief";
+		console.log({ ErrorMessage });
+		return ErrorMessage;
+	}
+	if (NewProfileForm.exists) {
+		let NewProfile = {
+			ProfileID: ProfileID,
+			SocialID: SocialID,
+			Name: NewProfileForm.name,
+			Handle: NewProfileForm.Handle,
+			Age: NewProfileForm.Age,
+			Maturity: NewProfileForm.Maturity,
+			ProfileType: NewProfileForm.ProfileType,
+			Bio: NewProfileForm.Bio,
+			FavoriteColor: NewProfileForm.FavoriteColor,
+			ProfilePic: NewProfileForm.ProfilePic,
+			Friends:[],
+			Chats: [],
+			Feed: [],
+			Notifications: [],
+			Systems: [],
+			PSettings: {}
+		}
+		const SuccessMessage = 'Successfully created Profile. Welcome to YoUniverse!';
+		console.log(SuccessMessage);
+		Account.Profiles.push(NewProfile.ProfileID);
+		return NewProfile;
+	}
+}
+
 export function DeleteProfile() {}
 export function UpdateProfile() {}
+
+
+
+
 
 //loading page
 export function VolunteerSignup() {}
 export function Searching(SearchInput, list) {}
+
+
+
+
 
 //color pretty
 export function FindTextColor(FavoriteColor, TextColor) {
