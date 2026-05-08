@@ -9,7 +9,7 @@ import tinycolor from "tinycolor2";
 export function changeProfile(NewProfileID) {
 	if (NewProfileID !== undefined || NewProfileID !== null) {
 		Account.SelectedProfile = Account.Profiles.find((profile) => profile.id === NewProfileID);
-		//then update to database
+		//TODO next in function: then update to database
 	} else if (NewProfileID === undefined) {
 		console.log(
 			'The profile you are trying to set the selected profile is not computing. Specifically it is registering as undefined'
@@ -46,7 +46,7 @@ export function Add2Front(SelectedProfileID) {
 export function RemoveFromFront(SelectedProfileID) {
 	if (SelectedProfileID !== undefined || SelectedProfileID !== null) {
 		let FoundProfile = Account.Profiles.find((profile) => profile.id === SelectedProfileID);
-		//remove from Fronters array in account (Account.Fronters)
+		//TODO next in function: remove from Fronters array in account (Account.Fronters)
 
 		return Account.Fronters;
 	}
@@ -87,16 +87,20 @@ console.log(NewMessage);
 }
 
 export function CreateChat(NewChatFormData) {
-
+//TODO make create chat function
 }
 export function AddChatParticipant() {
 	//some kind of option for continuing with the previous chats message history or starting new. this would only be for group chats
 	if (Chat.isGroupChat === false) {
+		//todo add participant and change to isGroupTrue = true
 	} else if (Chat.isGroupChat === true) {
+		//todo add participant
 	}
 }
-export function DeleteChat() {}
-export function CreateProfile(NewProfileForm) {
+export function DeleteChat() {
+	//todo write function delete chat from all records(profile's chat lists and wherever it was stored
+}
+export function CreateProfile(NewProfileForm) { //todo test to make sure it is working properly
 	const SocialID = crypto.randomUUID();
 	const ProfileID = crypto.randomUUID();
 
@@ -131,8 +135,12 @@ export function CreateProfile(NewProfileForm) {
 	}
 }
 
-export function DeleteProfile() {}
-export function UpdateProfile() {}
+export function DeleteProfile() {
+	//todo write function to delete a profile
+}
+export function UpdateProfile() {
+	//todo write function to update a profile
+}
 
 
 
@@ -140,7 +148,9 @@ export function UpdateProfile() {}
 
 //loading page
 export function VolunteerSignup() {}
-export function Searching(SearchInput, list) {}
+export function Searching(SearchInput, list) {
+	//todo write a function that searches for things
+}
 
 
 

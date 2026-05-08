@@ -6,7 +6,7 @@ import Messagebar from "$lib/components/miniponents/Messagebar.svelte";
 import {Chat} from "$lib/stores/Chat.svelte.js";
 </script>
 <div  class ="card border-[{MainThemeColors.ThirdLively}]0" style="background-color: {ScreenColors.BackgroundColor}; color: {ScreenColors.TextColor}">
-    <header class="card-header">Add, Name, and settings</header>
+    <header class="card-header">Add, Name, and settings</header><!--todo add button to add, a variable for the name, and a button to open settings-->
 <ChatBody Messages="{Chat.MessageHistory}"></ChatBody>
 <Messagebar></Messagebar>
 </div>
