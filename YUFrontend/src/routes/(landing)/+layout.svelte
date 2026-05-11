@@ -2,8 +2,10 @@
 	import '../../app.css';
 import Footer from '$lib/components/Footer.svelte';
 import Navbar from '$lib/components/blocks/Navbar.svelte';
+
 	//import BottomButtons from '$lib/components/BottomButtons.svelte';
 	let { children } = $props();
+
 </script>
 
 <Navbar></Navbar>

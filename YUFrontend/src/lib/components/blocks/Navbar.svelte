@@ -18,7 +18,7 @@
 		import {Account} from "$lib/stores/Account.svelte.js";
 	import LoginMini from '../LoginMini.svelte';
 	//import {logo} from '../images/blanklogotransparent.png';
-	import { BellSolid, EyeSolid, MessageCaptionSolid } from 'flowbite-svelte-icons';
+	import { BellSolid, EyeSolid, MessageCaptionSolid, SunOutline, MoonOutline} from 'flowbite-svelte-icons';
 	//for dropdown
 	import { sineIn } from 'svelte/easing';
 //import {page} from '$app/state';
@@ -26,7 +26,7 @@
 	import ProfileDash from '../ProfileDash.svelte';
 	import SwitchButton from '../miniponents/SwitchButton.svelte';
 	import {MainThemeColors, ScreenColors} from "$lib/stores/styling.svelte.js";
-	import {ChangeScreenMode} from "$lib/stores/functions.svelte.js";
+	//import {ChangeScreenMode} from "$lib/stores/functions.svelte.js";
 	import SiteInfoNav from "$lib/components/blocks/SiteInfoNav.svelte";
 	import Notifications from "$lib/components/miniponents/Notifications.svelte";
 	import MessageNotification from "$lib/components/miniponents/MessageNotification.svelte";
@@ -80,11 +80,11 @@
 </NavUl>
 <ProfileDash/>
 		{:else if (!authed)}
-		<NavUl>
+		<NavUl class="NavUl">
 			<Button class="button" href="./about" color={MainThemeColors.AccentColor}>About</Button>
 			<Button class="button" href="./goals" color={MainThemeColors.AccentColor}>Goals</Button>
 			<Button class="button" href="./announcements" color={MainThemeColors.AccentColor}>Announcements</Button>
-			<Button class="button" href ="./volunteeropportunities" color={MainThemeColors.AccentColor}>Help Out!</Button>
+			<Button class="button min-w-[100px]" href ="./volunteeropportunities" color={MainThemeColors.AccentColor}>Help Out!</Button>
 			<Button class="button" href= "./donation" color={MainThemeColors.AccentColor}>Donation</Button>
 			<Button class="button" href="./contact" color={MainThemeColors.AccentColor}>Contact</Button>
 			<Button class="button"
@@ -93,7 +93,7 @@
 			</Button>
 		</NavUl>
 		{:else }
-		<NavUl>
+		<NavUl class="NavUl">
 			<Button class="button" href="./about" color={MainThemeColors.AccentColor}>About</Button>
 			<Button class="button" href="./goals" color={MainThemeColors.AccentColor}>Goals</Button>
 			<Button class="button" href="./announcements" color={MainThemeColors.AccentColor}>Announcements</Button>
@@ -108,6 +108,13 @@
 
 		</NavUl>
 		{/if}
+	<!--{#if (Screenmode === 'light')}
+<button onclick = {ChangeScreenMode()}><MoonOutline></MoonOutline></button>
+		{:else if (Screenmode === 'dark')}
+<button onclick = {ChangeScreenMode()}><SunOutline></SunOutline></button>
+		{/if}
+	<button onclick = {ChangeScreenMode()}><SunOutline></SunOutline></button>
+	-->
 	</Navbar>
 	{#if (loginOpen===true)}
 		<div class="absolute mt-2 w-64 bg-white border border-gray-300 shadow-xl rounded z-50">

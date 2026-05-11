@@ -1,3 +1,8 @@
+import { onMount } from 'svelte';
+
+//let Screenmode =  $state(() =>window.matchMedia);
+
+
 export const MainThemeColors = {
 	AccentColor: '#77B602',
 	AlertColor: '#FF6F61',
@@ -10,7 +15,7 @@ export const ChangingColors = {
 	LightmodeText: '#050C1D',
 	DarkmodeText: '#FFFFFF'
 };
-//export const Screenmode = window.matchMedia;   //Svelte Hates "window" as usual
+ //Svelte Hates "window" as usual
 export const ScreenColors = $state(
 	{
 	Theme: 'light',

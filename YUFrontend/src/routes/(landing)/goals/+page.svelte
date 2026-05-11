@@ -1,6 +1,7 @@
-
+<script>
+</script>
 <article class="card">
-    <header>Goals</header>
+    <header><h1>Goals</h1></header>
     <section>
         <h2>Youniverse has two main goals:</h2>
         <ul>
@@ -14,7 +15,7 @@
         <h3>What is Allostatic load?</h3>
         <p>To put it simply, it is the increased likelihood of developing physical and mental illnesses due to chronic stress.</p>
         <cite>Allostatic Load: Importance, Markers, and Score Determination in Minority and Disparity Populations by Erik J Rodriquez, Edward N Kim, Anne E Sumner, Anna M Nápoles, Eliseo Pérez-Stable</cite>
-        <h3>Steps the project has taken to accomplish this goal:</h3>
+        <h3>Steps the project has taken to reduce user's allostatic load:</h3>
         <ul>
             <li>Framework built with plurals and their loved ones in mind</li>
             <li>Easy navigation of site and switching features</li>

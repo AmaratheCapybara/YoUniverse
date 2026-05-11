@@ -3,8 +3,10 @@ import { Account } from '$lib/stores/Account.svelte.js';
 import { Profile } from '$lib/stores/Profile.svelte.js';
 import { Chat } from '$lib/stores/Chat.svelte.js';
 import * as Themes from '$lib/stores/styling.svelte.js';
-import { ScreenColors } from '$lib/stores/styling.svelte.js';
+import { ScreenColors} from '$lib/stores/styling.svelte.js';
 import tinycolor from "tinycolor2";
+
+import { onMount } from 'svelte';
 
 export function changeProfile(NewProfileID) {
 	if (NewProfileID !== undefined || NewProfileID !== null) {
@@ -165,22 +167,26 @@ export function FindTextColor(FavoriteColor, TextColor) {
 	return TextColor;
 }
 /*export function SetScreenMode() {
-	if (Screenmode === window.matchMedia('(prefers-color-scheme: dark)')) {
-		ScreenColors.BackgroundColor = Themes.ChangingColors.DarkmodeBackground;
-		ScreenColors.TextColor = Themes.ChangingColors.DarkmodeText;
-		ScreenColors.Theme ='dark'
-		console.log('Screenmode set to ', ScreenColors.Theme);
-	}
-	if (Screenmode === window.matchMedia('(prefers-color-scheme: light)')) {
-		ScreenColors.BackgroundColor = Themes.ChangingColors.LightmodeBackground;
-		ScreenColors.TextColor = Themes.ChangingColors.LightmodeText;
-		ScreenColors.Theme ='light'
-		console.log('Screenmode set to light', ScreenColors.Theme);
-	} else {
-		ScreenColors.BackgroundColor = Themes.ChangingColors.LightmodeBackground;
-		ScreenColors.TextColor = Themes.ChangingColors.LightmodeText;
-	}
-	return ScreenColors;
+	onMount(() => {
+		if (Screenmode ===  window.matchMedia('(prefers-color-scheme: dark)')) {
+			ScreenColors.BackgroundColor = Themes.ChangingColors.DarkmodeBackground;
+			ScreenColors.TextColor = Themes.ChangingColors.DarkmodeText;
+			ScreenColors.Theme ='dark'
+			console.log('Screenmode set to ', ScreenColors.Theme);
+		}
+		if (Screenmode === window.matchMedia('(prefers-color-scheme: light)')) {
+			ScreenColors.BackgroundColor = Themes.ChangingColors.LightmodeBackground;
+			ScreenColors.TextColor = Themes.ChangingColors.LightmodeText;
+			ScreenColors.Theme ='light'
+			console.log('Screenmode set to light', ScreenColors.Theme);
+		} else {
+			ScreenColors.BackgroundColor = Themes.ChangingColors.LightmodeBackground;
+			ScreenColors.TextColor = Themes.ChangingColors.LightmodeText;
+			ScreenColors.Theme ='light'
+		}
+		return ScreenColors;
+	})
+
 }*/
 export function ChangeScreenMode() {
 	if (ScreenColors.Theme === 'dark') {
