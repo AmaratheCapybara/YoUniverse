@@ -1,0 +1,301 @@
+{
+  "AccountName": "Celestial Collective",
+  "Age": "41",
+  "AccountBio": "A constellation of voices orbiting together in harmony.",
+  "AccountType": "GeneralSystem",
+  "Profiles": [
+    {
+      "Name": "Astra",
+      "Handle": "@starflare",
+      "SocialID": "e3f7a7c2-9e21-4ad8-9b9d-3b35e1fa512a",
+      "ProfileID": "0",
+      "Age": "22",
+      "Maturity": "Adult",
+      "ProfileType": "System",
+      "Bio": "Glowing with curiosity and always orbiting around creative energy.",
+      "FavoriteColor": "pink",
+      "Friends": ["2", "3"],
+      "Chats": [
+        {
+          "_id":"0", 
+          "AllowedSocialIDs":
+            [
+              "e3f7a7c2-9e21-4ad8-9b9d-3b35e1fa512a",
+              "0a92f6c4-cc61-4828-9046-141f56e410ab",
+              "7db1c8b6-1417-4e92-b0e5-f272a4f7e19c"
+              ],"MessageHistory":[], "CSettings":[{"Title":"All Profiles"}]},{"_id":"chat123", "AllowedSocialIDs":["e3f7a7c2-9e21-4ad8-9b9d-3b35e1fa512a"],"MessageHistory":[], "CSettings":[]}, "chat456"],
+      "Feed": ["post001", "post002"],
+      "Notifications": ["notif001"],
+      "Systems": ["0"],
+      "PSettings": {
+        "Third Party Connections": {
+          "SPMemberID": "spm_78901",
+          "PKMemberID": "pkm_12098",
+          "SPSync": "YU2SP",
+          "PKSync": "bothways",
+          "Middleware": [
+            "Make YoUniverse Fronting Middleware"
+          ]
+        },
+        "Privacy": [
+          "Hide Age from public view",
+          "Allow DMs only from friends"
+        ],
+        "Moderation": {
+          "Allow Caution Badge When entering a chat to other participants": "True",
+          "CensorshipOn": "True",
+          "Profanity censorship on": "True",
+          "Custom censorship on": "False",
+          "Custom censors": []
+        }
+      }
+    },
+    {
+      "Name": "Echo",
+      "Handle": "@resonance",
+      "SocialID": "0a92f6c4-cc61-4828-9046-141f56e410ab",
+      "ProfileID": "1",
+      "Age": "15",
+      "Maturity": "Adolescent",
+      "ProfileType": "Moon",
+      "Bio": "Quiet but observant, reflecting the voices around them.",
+      "FavoriteColor":"black",
+      "Friends": ["0"],
+      "Chats": ["chat789"],
+      "Feed": ["post010"],
+      "Notifications": [],
+      "Systems": ["system001"],
+      "PSettings": {
+        "Third Party Connections": {
+          "SPMemberID": "spm_55555",
+          "PKMemberID": "pkm_88888",
+          "SPSync": "SP2YU",
+          "PKSync": "YU2PK",
+          "Middleware": [
+            "Make Third Party services Fronting Middleware for YoUniverse"
+          ]
+        },
+        "Privacy": [
+          "Hide Bio from strangers"
+        ],
+        "Moderation": {
+          "Allow Caution Badge When entering a chat to other participants": "False",
+          "CensorshipOn": "False",
+          "Profanity censorship on": "False",
+          "Custom censorship on": "True",
+          "Custom censors": ["loud", "shout"]
+        }
+      }
+    },
+    {
+      "Name": "Solari",
+      "Handle": "@dawnkeeper",
+      "SocialID": "7db1c8b6-1417-4e92-b0e5-f272a4f7e19c",
+      "ProfileID": "2",
+      "Age": "",
+      "Maturity": "Eternal",
+      "ProfileType": "Planet",
+      "Bio": "A guiding light across timelines, steady and radiant.",
+      "FavoriteColor": "#ffee78",
+      "Friends": ["0"],
+      "Chats": ["chat111", "chat222"],
+      "Feed": ["post100", "post101", "post102"],
+      "Notifications": ["notif010", "notif011"],
+      "Systems": [],
+      "PSettings": {
+        "Third Party Connections": {
+          "SPMemberID": "",
+          "PKMemberID": "",
+          "SPSync": "bothways",
+          "PKSync": "bothways",
+          "Middleware": [
+            "Sync Fronting across all services"
+          ]
+        },
+        "Privacy": [
+          "Hide Feed from non-friends",
+          "Show Online Status only to Systems"
+        ],
+        "Moderation": {
+          "Allow Caution Badge When entering a chat to other participants": "True",
+          "CensorshipOn": "True",
+          "Profanity censorship on": "True",
+          "Custom censorship on": "True",
+          "Custom censors": ["darkness", "void"]
+        }
+      }
+    }
+  ],
+  "Systems": [
+    {
+      "Name": "Solari",
+      "ProfileID": "2",
+      "ProfileType": "System"
+    }
+  ],
+  "Headmates": [
+    {
+      "Name": "Astra",
+      "ProfileID": "0",
+      "ProfileType": "Planet"
+    },
+    {
+      "Name": "Echo",
+      "ProfileID": "1",
+      "ProfileType": "Moon"
+    }
+  ],
+  "Fronters": [
+    {
+    "Name": "Astra",
+    "Handle": "@starflare",
+    "SocialID": "e3f7a7c2-9e21-4ad8-9b9d-3b35e1fa512a",
+    "ProfileID": "1",
+    "Age": "22",
+    "Maturity": "Adult",
+    "ProfileType": "Planet",
+    "Bio": "Glowing with curiosity and always orbiting around creative energy.",
+    "FavoriteColor":"pink",
+    "Friends": ["2", "3"],
+    "Chats": ["123", "456"],
+    "Feed": ["post001", "post002"],
+    "Notifications": ["notif001"],
+    "Systems": ["system001"],
+    "PSettings": {
+      "Third Party Connections": {
+        "SPMemberID": "spm_78901",
+        "PKMemberID": "pkm_12098",
+        "SPSync": "YU2SP",
+        "PKSync": "bothways",
+        "Middleware": [
+          "Make YoUniverse Fronting Middleware"
+        ]
+      },
+      "Privacy": [
+        "Hide Age from public view",
+        "Allow DMs only from friends"
+      ],
+      "Moderation": {
+        "Allow Caution Badge When entering a chat to other participants": "True",
+        "CensorshipOn": "True",
+        "Profanity censorship on": "True",
+        "Custom censorship on": "False",
+        "Custom censors": []
+      }
+    }
+  },{
+      "Name": "Solari",
+      "Handle": "@dawnkeeper",
+      "SocialID": "7db1c8b6-1417-4e92-b0e5-f272a4f7e19c",
+      "ProfileID": "2",
+      "Age": "",
+      "Maturity": "Eternal",
+      "ProfileType": "Planet",
+      "Bio": "A guiding light across timelines, steady and radiant.",
+      "FavoriteColor": "#ffee78",
+      "Friends": ["0"],
+      "Chats": ["chat111", "chat222"],
+      "Feed": ["post100", "post101", "post102"],
+      "Notifications": ["notif010", "notif011"],
+      "Systems": [],
+      "PSettings": {
+        "Third Party Connections": {
+          "SPMemberID": "",
+          "PKMemberID": "",
+          "SPSync": "bothways",
+          "PKSync": "bothways",
+          "Middleware": [
+            "Sync Fronting across all services"
+          ]
+        },
+        "Privacy": [
+          "Hide Feed from non-friends",
+          "Show Online Status only to Systems"
+        ],
+        "Moderation": {
+          "Allow Caution Badge When entering a chat to other participants": "True",
+          "CensorshipOn": "True",
+          "Profanity censorship on": "True",
+          "Custom censorship on": "True",
+          "Custom censors": ["darkness", "void"]
+        }
+      }
+    }
+  ],
+  "SelectedProfile":
+  {
+    "Name": "Astra",
+    "Handle": "@starflare",
+    "SocialID": "e3f7a7c2-9e21-4ad8-9b9d-3b35e1fa512a",
+    "ProfileID": "1",
+    "Age": "22",
+    "Maturity": "Adult",
+    "ProfileType": "Planet",
+    "Bio": "Glowing with curiosity and always orbiting around creative energy.",
+    "FavoriteColor":"pink",
+    "Friends": ["2", "3"],
+    "Chats": ["0","123", "456"],
+    "Feed": ["post001", "post002"],
+    "Notifications": ["notif001"],
+    "Systems": ["system001"],
+    "PSettings": {
+      "Third Party Connections": {
+        "SPMemberID": "spm_78901",
+        "PKMemberID": "pkm_12098",
+        "SPSync": "YU2SP",
+        "PKSync": "bothways",
+        "Middleware": [
+          "Make YoUniverse Fronting Middleware"
+        ]
+      },
+      "Privacy": [
+        "Hide Age from public view",
+        "Allow DMs only from friends"
+      ],
+      "Moderation": {
+        "Allow Caution Badge When entering a chat to other participants": "True",
+        "CensorshipOn": "True",
+        "Profanity censorship on": "True",
+        "Custom censorship on": "False",
+        "Custom censors": []
+      }
+    }
+  },
+  "ASetting": {
+    "Third Party Connections": {
+      "SPToken": "token_12345",
+      "PKToken": "token_67890",
+      "SPUSer_id": "user_24680",
+      "SPSync": "YU2SP",
+      "PKSync": "bothways",
+      "Middleware": [
+        "Sync Fronting across all services"
+      ]
+    },
+    "Privacy": {
+      "Vulnerable Parts": {
+        "Somewhat Vulnerable": ["Moon", "Adolescent", "Echo"],
+        "Entirely Vulnerable": ["Satellite"],
+        "Vulnerable Profile Managers": ["Planet Accounts"]
+      }
+    },
+    "Moderation": {
+      "Allow Caution Badge When entering a chat to other participants": "For Somewhat Vulnerable",
+      "Allow censorship": "True",
+      "Profanity censorship": "True",
+      "Custom censorship": "True",
+      "Our Custom censors": ["fear", "silence"],
+      "Censored Profiles": ["Moon", "Adolescent", "Echo"]
+    },
+    "Notifications": {
+      "System Alerts": ["Daily Summary", "Fronting Changes"],
+      "Profile Mentions": ["All"]
+    },
+    "Profile Settings": {
+      "Third Party Connections": "All profiles can customize their settings",
+      "Privacy": "nonvulnerable Profiles can customize their setting",
+      "Moderation": "nonvulnerable Profiles can customize their setting",
+      "Notifications": "All profiles can customize their settings"
+    }
+  }
+}

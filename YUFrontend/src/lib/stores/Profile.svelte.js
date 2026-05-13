@@ -7,7 +7,8 @@ export class ProfileSkeleton {
     ProfileID =$state(""); //just the index of the Profile in Account.Profiles
     Age = $state("");
     Maturity = $state(["AgeSlider" || "Eternal" || "Elderly" || "Adult" || "Adolescent" || "Child" || "Ageless"]);
-    ProfileType = $state("");
+    Pronouns =$state();
+		ProfileType = $state("");
     Bio = $state("");
     FavoriteColor =$state("");
     ProfilePic = $state("");

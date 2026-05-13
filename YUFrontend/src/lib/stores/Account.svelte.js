@@ -3,6 +3,8 @@ export class AccountSkeleton {
     Fronters = $state([]);
     Headmates = $state([]);
     Profiles = $state([]);
+		Systems = $state([]);
+
 
     AccountName = $state("Celestial Collective");
     Age = $state("41");

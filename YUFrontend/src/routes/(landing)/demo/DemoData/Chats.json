@@ -1,0 +1,57 @@
+[
+    {
+        "_id":"0",
+         "AllowedSocialIDs":
+         [
+            "e3f7a7c2-9e21-4ad8-9b9d-3b35e1fa512a",
+            "0a92f6c4-cc61-4828-9046-141f56e410ab",
+            "7db1c8b6-1417-4e92-b0e5-f272a4f7e19c"
+            ],
+        "MessageHistory":
+        [
+
+        ],
+         "CSettings":
+         [
+            {"Title":"All Profiles"}
+         ]
+    },
+    {
+        "_id":"123", 
+        "AllowedSocialIDs":
+        [
+            "e3f7a7c2-9e21-4ad8-9b9d-3b35e1fa512a",
+            "0a92f6c4-cc61-4828-9046-141f56e410ab"
+            
+        ],
+        "MessageHistory":
+        [
+
+        ], 
+        "CSettings":[
+
+        ]
+    },
+    {
+        "_id":"456",
+        "AllowedSocialIDs":
+        [
+            "e3f7a7c2-9e21-4ad8-9b9d-3b35e1fa512a",
+            "7db1c8b6-1417-4e92-b0e5-f272a4f7e19c"
+        ],
+        "MessageHistory":
+        [
+
+        ], 
+        "CSettings":[
+            {
+                "Title":""
+
+            },
+            {
+                "AllowFrontersToSendRequest2Join":true
+            }
+
+        ]
+}
+]

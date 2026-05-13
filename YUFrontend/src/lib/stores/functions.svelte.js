@@ -4,13 +4,46 @@ import { Profile } from '$lib/stores/Profile.svelte.js';
 import { Chat } from '$lib/stores/Chat.svelte.js';
 import * as Themes from '$lib/stores/styling.svelte.js';
 import { ScreenColors} from '$lib/stores/styling.svelte.js';
+import {RandoStates} from '$lib/stores/RandomStates.svelte.js';
 import tinycolor from "tinycolor2";
+//import { db } from '$lib/server/db/index.js';
+import {db} from '../../routes/(landing)/demo/DemoData/database.js';
 
-import { onMount } from 'svelte';
+//import { onMount } from 'svelte';
+//import { RandomStates } from '$lib/stores/RandomStates.svelte.js';
 
-export function changeProfile(NewProfileID) {
-	if (NewProfileID !== undefined || NewProfileID !== null) {
-		Account.SelectedProfile = Account.Profiles.find((profile) => profile.id === NewProfileID);
+
+export function StartupAccount (DataFromDB) {
+	Account.SelectedProfile = DataFromDB.SelectedProfile;
+	Account.Fronters = DataFromDB.Fronters;
+	Account.Headmates = DataFromDB.Headmates;
+	Account.Profiles = DataFromDB.Profiles;
+	Account.Systems = DataFromDB.Systems;
+	Account.AccountName = DataFromDB.AccountName;
+	Account.Age = DataFromDB.Age;
+	Account.AccountBio = DataFromDB.AccountBio;
+	Account.AccountType = DataFromDB.AccountType;
+
+	console.log ("Welcome back, "+ Account.AccountName+ "!");
+return Account;
+}
+
+export function ChangeProfile(NewProfileID) {
+	if (NewProfileID.exists) {
+		Account.SelectedProfile = Account.Profiles.filter((profile) => profile.id === NewProfileID)
+			.then(
+				Profile.ProfileID =Account.SelectedProfile.ProfileID,
+		Profile.Name = Account.SelectedProfile.Name,
+		Profile.Age = Account.SelectedProfile.Age,
+		Profile.Bio = Account.SelectedProfile.Bio,
+		Profile.Handle = Account.SelectedProfile.Handle,
+		Profile.ProfileType = Account.SelectedProfile.ProfileType,
+		Profile.Chats = Account.SelectedProfile.Chats,
+		Profile.SocialID = Account.SelectedProfile.SocialID,
+		Profile.FavoriteColor = Account.SelectedProfile.FavoriteColor
+			)
+		return Profile;
+
 		//TODO next in function: then update to database
 	} else if (NewProfileID === undefined) {
 		console.log(
@@ -53,6 +86,13 @@ export function RemoveFromFront(SelectedProfileID) {
 		return Account.Fronters;
 	}
 }
+
+export function ChangeButtonProfileList (NewList) {
+	RandoStates.SelectedProfiles = [];
+	RandoStates.SelectedProfiles = NewList;
+	return RandoStates.SelectedProfiles;
+}
+
 export function SelectSender(NewSenderID) {
 	if (NewSenderID !== undefined || NewSenderID !== null) {
 		let Sender = Account.Profiles.find((profile) => profile.id === NewSenderID);
@@ -60,6 +100,7 @@ export function SelectSender(NewSenderID) {
 	} else if (NewSenderID === undefined) {
 		console.log('The NewSenderID is not getting into the function.');
 	} else if (NewSenderID === null) {
+		console.log("why is NewSenderID null?");
 	}
 }
 export async function SendMessage(messageInput) {
@@ -88,6 +129,17 @@ console.log(NewMessage);
 	}
 }
 
+export function OpenChat (ChatID) {
+RandoStates.SelectedChat = db.Chats.filter((ChatID)=>ChatID !== ChatID);
+Chat.ChatID = RandoStates.SelectedChat.ChatID;
+Chat.AllowedSocialIDs = RandoStates.SelectedChat.AllowedSocialIDs;
+Chat.MessageHistory = RandoStates.SelectedChat.MessageHistory;
+Chat. isGroupChat = RandoStates.SelectedChat.isGroupChat;
+Chat.Name = RandoStates.SelectedChat.Name;
+Chat.SameAccountProfilesiConversation = RandoStates.SelectedChat.SameAccountProfilesiConversation
+return Chat;
+}
+export function SortConversations() {}
 export function CreateChat(NewChatFormData) {
 //TODO make create chat function
 }
