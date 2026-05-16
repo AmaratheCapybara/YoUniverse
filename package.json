@@ -1,0 +1,8 @@
+{
+	"name": "youniverse",
+	"private": true,
+	"scripts": {
+		"dev": "node scripts/dev.mjs",
+		"dev:sh": "./dev.sh"
+	}
+}

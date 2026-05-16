@@ -23,7 +23,7 @@ Headmates: [
         subsystems: ['Leaders'],
         fronting: Boolean
     },
-    { ProfileID: 3, name: 'Jese Leos', handle: '@Jese', subsystems: 'FGH', fronting: Boolean },
+    { ProfileID: 3, name: 'Jese Leos', handle: '@Jese', subsystems: ['FGH'], fronting: false },
     {
         ProfileID: '4',
         name: 'Little Bonnie',

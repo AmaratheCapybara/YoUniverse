@@ -1,12 +1,13 @@
 <script>
     import {ButtonGroup, Button, GradientButton, Footer} from 'flowbite-svelte';
     import '../../app.css';
+    import {ScreenColors} from "$lib/stores/styling.svelte.js";
 </script>
-<Footer footerType="sticky" class="absolute flex justify-stretch justify-center bg-transparent justify-items-center">
+<Footer footerType="sticky" class="footer color: {ScreenColors.TextColor} backgroundColor={ScreenColors.AccentColor} " >
 
-    <ButtonGroup id="FooterButtons" class=" flex justify-stretch justify-center bg-[#77B602] center">
-        <Button href="https://ko-fi.com/youniverseproject" class="basicBitchButton">Donation</Button>
-        <Button href="https://www.redbubble.com/people/TheYoUniverse/shop?asc=u"  class="bg-[#77B602]">Merch</Button>
-        <Button href="../about"  class="bg-[#77B602]">About</Button>
+    <ButtonGroup id="FooterButtons" class="">
+        <Button href="../donation" class="">Donation</Button>
+        <Button href="../getinvolved"  class="">Get Involved</Button>
+        <Button href="../about"  class="">About</Button>
     </ButtonGroup>
 </Footer>

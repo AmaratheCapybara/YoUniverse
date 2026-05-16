@@ -1,25 +1,23 @@
-import * as auth from '$lib/server/auth.js';
+import { authCookieName, clearAuthCookie, validateAuthToken } from '$lib/server/backend-auth.js';
 
-const handleAuth = async ({ event, resolve }) => {
-	const sessionToken = event.cookies.get(auth.sessionCookieName);
+export async function handle({ event, resolve }) {
+	const token = event.cookies.get(authCookieName);
 
-	if (!sessionToken) {
-		event.locals.user = null;
-		event.locals.session = null;
-		return resolve(event);
+	event.locals.user = null;
+	event.locals.authToken = token ?? null;
+
+	if (token) {
+		try {
+			event.locals.user = await validateAuthToken(token);
+		} catch {
+			event.locals.user = null;
+		}
+
+		if (!event.locals.user) {
+			clearAuthCookie(event);
+			event.locals.authToken = null;
+		}
 	}
 
-	const { session, user } = await auth.validateSessionToken(sessionToken);
-
-	if (session) {
-		auth.setSessionTokenCookie(event, sessionToken, session.expiresAt);
-	} else {
-		auth.deleteSessionTokenCookie(event);
-	}
-
-	event.locals.user = user;
-	event.locals.session = session;
 	return resolve(event);
-};
-
-export const handle = handleAuth;
+}

@@ -1,12 +1,10 @@
 export class ChatSkeleton {
-    _id= $state("");
+    ChatID= $state("");
     AllowedSocialIDs = $state([]);
     MessageHistory = $state([]);
-    CSettings = $state([
-        {
-            "Title":""
-        }
-    ])
+    isGroupChat =$state(false);
+		Name = $state(undefined);
+		SameAccountProfilesinConversation= $state([undefined]);
       
 }
 

@@ -2,8 +2,7 @@
 
 ## Bugs
 
-* Investigate why docker doesn't update files
-* Clean up docker scripts because I made a mess of them
+* Improve first-run env validation messages
 
 ## The Things To Do
 
@@ -11,9 +10,5 @@
 * Husky + lint-staged
 * Migrate what's possible for backend-old
 * Add tests
-* Add e2e tests that work with containerized postgres and redis
+* Add e2e tests for the serverless development setup
 * Fastify plugins
-
-## Notes
-
-* If you want to debug the server container, you can run this: `docker compose run --rm server sh`

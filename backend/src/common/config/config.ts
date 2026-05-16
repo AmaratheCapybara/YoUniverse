@@ -21,8 +21,11 @@ export interface EnvConfig {
 		uri?: string;
 	};
 	redis: {
-		host: string;
-		port: number;
+		restUrl?: string;
+		restToken?: string;
+	};
+	cache: {
+		ttl: number;
 	};
 	jwtPrivateKey: string;
 	elasticSearch: {
@@ -42,6 +45,18 @@ export interface EnvConfig {
 	};
 }
 
+const databaseUri =
+	process.env.DB ??
+	process.env.DATABASE_URL ??
+	process.env.DATABASE_URI ??
+	(process.env.DATABASE_USER &&
+	process.env.DATABASE_PASSWORD &&
+	process.env.DATABASE_HOST &&
+	process.env.DATABASE_PORT &&
+	process.env.DATABASE_NAME
+		? `postgres://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@${process.env.DATABASE_HOST}:${process.env.DATABASE_PORT}/${process.env.DATABASE_NAME}`
+		: undefined);
+
 export const config = {
 	server: {
 		port: Number(process.env.PORT ?? '3000'),
@@ -56,14 +71,15 @@ export const config = {
 		username: process.env.DATABASE_USER,
 		password: process.env.DATABASE_PASSWORD,
 		name: process.env.DATABASE_NAME,
-		uri: `postgres://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@${process.env.DATABASE_HOST}:${process.env.DATABASE_PORT}/${process.env.DATABASE_NAME}`,
+		uri: databaseUri,
 		logging: false
 	},
 	redis: {
-		host: process.env.REDIS_HOST,
-		port: +process.env.REDIS_PORT!,
-		uri: `redis://${process.env.REDIS_HOST}:${process.env.REDIS_PORT}`,
-		ttl: process.env.REDIS_TTL ?? 60
+		restUrl: process.env.UPSTASH_REDIS_REST_URL ?? process.env.REDIS_REST_URL,
+		restToken: process.env.UPSTASH_REDIS_REST_TOKEN ?? process.env.REDIS_REST_TOKEN
+	},
+	cache: {
+		ttl: +(process.env.CACHE_TTL ?? 60)
 	},
 	jwtPrivateKey: process.env.JWT_PRIVATE_KEY ?? 'jwtPrivateKey',
 	elasticSearch: {

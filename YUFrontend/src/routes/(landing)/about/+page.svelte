@@ -1,7 +1,8 @@
 <script>
+	import "../../../app.css"
 </script>
 
-<article>
+<article class="card">
 	<section>
 		<h1>Welcome to YoUniverse!</h1>
 		<h3>The first social media platform built with plural systems and their loved ones in mind</h3>
@@ -19,3 +20,9 @@
 		</p>
 	</section>
 </article>
+<style lang="postcss">
+	@reference "tailwindcss";
+	:global(html) {
+
+	}
+</style>

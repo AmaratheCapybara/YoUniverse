@@ -1,12 +1,13 @@
-/** @type {import('./$types').LayoutServerLoad} */
 import { redirect } from '@sveltejs/kit';
 
+/** @type {import('./$types').LayoutServerLoad} */
+export async function load({ locals, url }) {
+	if (!locals.user) {
+		const redirectTo = `${url.pathname}${url.search}`;
+		redirect(303, `/auth?redirectTo=${encodeURIComponent(redirectTo)}`);
+	}
 
-export async function load({cookies, url}) {
-
-if(!cookies.get('logged_in')) {
-    redirect(303, '/demo/lucia/login?redirectTo=${url.pathname}')
-}
-    
-    return {};
+	return {
+		user: locals.user
+	};
 }

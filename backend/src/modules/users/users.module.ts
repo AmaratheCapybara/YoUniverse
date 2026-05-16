@@ -1,6 +1,7 @@
 import { DatabaseModule } from '@/database/database.module';
 import { CacheModule } from '@nestjs/cache-manager';
 import { forwardRef, Module } from '@nestjs/common';
+import { PassportModule } from '@nestjs/passport';
 import { UsersController } from './users.controller';
 import { usersProviders } from './users.providers';
 import { UsersService } from './users.service';
@@ -11,12 +12,13 @@ import { JwtStrategy } from './auth/jwt-strategy';
 	imports: [
 		DatabaseModule,
 		CacheModule.register(),
+		PassportModule.register({ defaultStrategy: 'jwt' }),
 		// forwardRef(() => MailModule),
 		forwardRef(() => ChannelsModule),
 		forwardRef(() => MessagesModule)
 	],
 	controllers: [UsersController],
-	providers: [UsersService, ...usersProviders],
-	exports: [UsersService, ...usersProviders, /*JwtStrategy*/]
+	providers: [UsersService, JwtStrategy, ...usersProviders],
+	exports: [UsersService, JwtStrategy, ...usersProviders]
 })
 export class UsersModule {}

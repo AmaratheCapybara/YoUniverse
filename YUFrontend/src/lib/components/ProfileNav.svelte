@@ -1,8 +1,17 @@
 <script>
 	import { Avatar, Sidebar, SidebarGroup, SidebarItem, SidebarButton, Listgroup, ListgroupItem } from 'flowbite-svelte';
 	import { ChartOutline, GridSolid, MailBoxSolid, UserSolid } from 'flowbite-svelte-icons';
-	import { page } from '$app/stores';
-    let {AboutOpen=$bindable(true),...props} =$props()
+	import { page } from '$app/state';
+    let {
+        AboutOpen=$bindable(true),
+        StargazingOpen =$bindable(false),
+        FreeOpen=$bindable(false),
+        SystemOpen=$bindable(false),
+        GroupsOpen=$bindable(false),
+
+        ...props
+
+    } =$props();
 	let activeUrl = $state($page.url.pathname);
 	//import PlusPlaceholder from '../../../utils/PlusPlaceholder.svelte';
 	const spanClass = 'flex-1 ms-3 whitespace-nowrap';
@@ -11,19 +20,19 @@
 
     //functions
 	export async function AboutToggle() {
-        () => (AboutOpen = !isAboutOpen)
+        () => (AboutOpen = !AboutOpen)
     };
     export async function StarGazingToggle(StarGazingOpen) {
-        () => (isOpen = !isOpen)
+        () => (StargazingOpen = !StargazingOpen)
     };
     export async function FriendsToggle(FriendsOpen) {
-        () => (isOpen = !isOpen)
+        () => (FreeOpen = !FreeOpen)
     };
     export async function SystemsToggle(SystemsOpen) {
-        () => (isOpen = !isOpen)
+        () => (SystemOpen = !SystemOpen)
     };
     export async function GroupsToggle(GroupsOpen) {
-        () => (isOpen = !isOpen)
+        () => (GroupsOpen = !GroupsOpen)
     };
 let navCategories=[
     {category:"About me!", function: AboutToggle, tooltip:""},
@@ -45,7 +54,7 @@ let navCategories=[
 </section>
 <sectiion class="text-black items-center text-black dark:text-color-text">
     <Listgroup>
-        {#each navCategories}
+        {#each navCategories as navCategories}
         <ListgroupItem onclick={navCategories.function}>
             <h4>
                 {navCategories.category}

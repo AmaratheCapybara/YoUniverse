@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<article>
+<article class="card">
 	<ul>
 		<li>
 			<b>Email:</b> youniversedevteam (at) gmail.com

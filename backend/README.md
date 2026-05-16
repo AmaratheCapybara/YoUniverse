@@ -1,7 +1,14 @@
-# HOW TO USE
+# Backend
 
-1. Run `cp .env.sample .env && yarn install && ./scripts/start.sh && yarn db:seed`
-2. Visit `http://localhost:3000/docs/swagger`
+For normal development, use the root launcher instead:
+
+```bash
+npm run dev
+```
+
+Run that from the project root. It builds this backend and starts it with the frontend. The backend reads `backend/.env`; set `DB` to the Neon Postgres connection string.
+
+Visit `http://localhost:3000/docs/swagger` after the backend starts.
 
 ## TEST COMMANDS
 
